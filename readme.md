@@ -14,4 +14,4 @@ When this branch has passed testing, documentation "should" be revisited and the
 
 The Wiki will then be updated with the latest link!
 
-If you have any questions or suggestions; contact me on Twitter @kylehulton or via email at kyle.hulton@kyit.co.uk
+If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton) or via email at kyle.hulton@kyit.co.uk
