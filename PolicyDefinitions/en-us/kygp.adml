@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
-	<displayName>KyIT</displayName>
-	<description>Policies made by Kyle for his IT Blogness</description>
+	<displayName>KyGP</displayName>
+	<description>KyGP - Group Policy Administrative Template Pack</description>
 	<resources>
 		<stringTable>
-			<string id="00">Kyle's Custom Group Policies</string>
-			<string id="00_00">Kyle made these settings.
-
-Use them with due care and attention.
-
-Any problems I can be avaiable on Skype for Business at kyle@kyit.co.uk
+			<string id="00">KyGP</string>
+			<string id="00_00">These's polcies were created for specific purposes, such as enabling via Group Policiy, user settings that exist on Windows but did not exist in the Vanilla Group Policy templates.
+            
+Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
 			</string>
 			<string id="Su_Winx86">32-bit Windows Only!</string>
 			<string id="Su_Winx64">64-bit Windows Only!</string>

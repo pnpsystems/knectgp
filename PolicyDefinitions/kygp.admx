@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="0.9" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 	<policyNamespaces>
-		<target prefix="kyit" namespace="Microsoft.Policies.kyit" />
+		<target prefix="kygp" namespace="Microsoft.Policies.kygp" />
 		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
 	</policyNamespaces>
 	<resources minRequiredRevision="1.0" />
