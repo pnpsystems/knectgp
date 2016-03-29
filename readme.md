@@ -1,81 +1,17 @@
-#Group Policy Reference
+#KyGP
 
-1. ##COMPUTER CONFIGURATION
+## Pre-release
 
-    1.1 Java
+The master branch is pre-release and may or may not have been tested yet.
 
-        1.1.1 DISABLE AUTOUPDATE FOR JAVA (32-BIT WINDOWS)
+Tests are performed in a virtual environment with a phsyical domain controller;
+    Current setup is a Physical Windows Server 2016 TP4
+    Clients are virutalised on Hyper-V on a Windows 10 Desktop or
+    virtualised on VMWare Fusion on a Mac OS X 10.11 MacBook Pro
     
-        1.1.2 DISABLE AUTOUPDATE FOR JAVA (64-BIT WINDOWS)
+When this branch has passed testing, documentation "should" be revisited and then uploaded to a new branch.
+        "Release-v?"
 
-2. ##USER CONFIGURATION
-    
-    2.1 WINDOWS 10
+The Wiki will then be updated with the latest link!
 
-        2.1.1 SETTINGS – PERSONALISATION – COLOURS
-        
-            2.1.1.1 Specify control of automatic accent colour picking
-            
-            2.1.1.2 Enable Show Colour on Start, Taskbar and Action Center
-            
-            2.1.1.3 Enable Show Colour on Title Bar
-
-
-##Computer Configuration
-
-    1.1 ##Java
-    
-        1.1.1 Disable AutoUpdate for Java (32-bit Windows)
-        
-            Requirement: 32-bit Windows
-            
-            This setting disables Auto Update for Java.
-            Not Configured stops enforcing the policy.
-            Enabled: disables Java Auto Update.
-            Disabled: enables Java Auto Update.
-        
-            Please note, this policy only affects 32-bit Windows.
-            
-        1.1.2 Disable AutoUpdate for Java (64-bit Windows)
-        
-            Requirement: 64-bit Windows
-            
-            This setting disables Auto Update for Java.
-            Not Configured stops enforcing the policy.
-            Enabled: disables Java Auto Update.
-            Disabled: enables Java Auto Update.
-            
-            Please note, this policy only affects 64-bit Windows.
-            
-##User Configuration
-
-    2.1 Windows 10
-    
-        2.1.1 Settings – Personalisation – 
-        
-            2.1.1.1 Specify control of automatic accent colour picking
-            
-                Requirement: Windows 10 TH2/Server 2016 TP4
-                
-                Not configured will not remove the policy. 
-                    It simply stops enforcing.
-                Enabled turns on the setting in Settings>Personalisation>Colours.
-                Disabled turns it off.
-                    
-            2.1.1.2 Enable Show Colour on Start, Taskbar and Action Center
-            
-                Requirement: Windows 10 TH2/Server 2016 TP4
-                
-                Not configured will to remove the policy.
-                    It simply stops enforcing.
-                Enabled turns on the setting to Show Colours on Start, Taskbar and Action Center, but it doesn't affect the Title Bars.
-                Disabled turns it off.
-                
-            2.1.1.3 Enable Show Colour on Title Bar
-            
-                Requirement: Windows 10 TH2/Server 2016 
-                
-                Not configured will not remove the policy.
-                        It simply stops enforcing.
-                Enabled turns on the setting to Show Colours on the Title Bars.
-                Disabled turns it off.
+If you have any questions or suggestions; contact me on Twitter @kylehulton or via email at kyle.hulton@kyit.co.uk
