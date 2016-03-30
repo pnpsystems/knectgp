@@ -1,118 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.2r1 -->
+<!-- Version: 0.3.0 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.2"
+    revision="0.3"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions"
 >
-	<policyNamespaces>
-		<target
-            prefix="KyGP"
-            namespace="KyIT.KyGP" 
+    <policyNamespaces>
+        <target prefix="KyGP" namespace="KyIT.KyGP" />
+        <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    </policyNamespaces>
+    <resources minRequiredRevision="0.3" />
+        <supportedOn>
+            <definitions>
+                <definition name="win32" displayName="$(string.win32)" />
+                <definition name="amd64" displayName="$(string.amd64)" />
+                <definition name="Su_Windows_1511" displayName="$(string.Su_Windows_1511)" />
+            </definitions>
+        </supportedOn>
+    <categories>
+        <category name="KyGP" 
+                  displayName="$(string.C_KyGP)"
+                  explainText="$(string.C_KyGP_d)"
         />
-        <using 
-            prefix="windows" 
-            namespace="Microsoft.Policies.Windows"
-        />
-	</policyNamespaces>
-	<resources minRequiredRevision="0.2" />
-	<supportedOn>
-		<definitions>
-            <definition
-                name="win32"
-                displayName="$(string.win32)"
-            />
-			<definition
-                name="amd64" 
-                displayName="$(string.amd64)"
-            />
-			<definition 
-                name="Su_Windows_1511"
-                displayName="$(string.Su_Windows_1511)"
-            />
-        </definitions>
-  	</supportedOn>
-  <categories>
-	<category name="KyGP" displayName="$(string.KyGP)" explainText="$(string.KyGP_Desc)"></category>
-	<category name="Java" displayName="$(string.Java)" explainText="$(string.Java_Desc)">
-		<parentCategory ref="KyGP" />
-	</category>
-	<category name="Windows10" displayName="$(string.01)" explainText="$(string.01_00)">
-		<parentCategory ref="KyGP" />
-	</category>
-	<category name="Windows10Colours" displayName="$(string.01_01)" explainText="$(string.01_01_00)">
-		<parentCategory ref="Windows10" />
-	</category>
-  </categories>
-  <policies>
-    <policy name="AutoColourization" class="User" displayName="$(string.01_01_01)" explainText="$(string.01_01_01_00)" key="Control Panel\Desktop" valueName="AutoColorization">
-      <parentCategory ref="Windows10Colours" />
-      <supportedOn ref="Su_Windows_1511" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>
-	<policy name="ShowColourExptTitleBar" class="User" displayName="$(string.01_01_02)" explainText="$(string.01_01_02_00)" key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" valueName="ColorPrevalence">
-	      <parentCategory ref="Windows10Colours" />
-      <supportedOn ref="Su_Windows_1511" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-	</policy>
-	<policy name="ShowColourOnTitleBar" class="User" displayName="$(string.01_01_03)" explainText="$(string.01_01_03_00)" key="Software\Microsoft\Windows\DWM" valueName="ColorPrevalence">
-	      <parentCategory ref="Windows10Colours" />
-      <supportedOn ref="Su_Windows_1511" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-	</policy>
-	<policy name="JavaAutoUpdate_Winx86" class="Machine" displayName="$(string.02_01)" explainText="$(string.02_01_00)" key="SOFTWARE\JavaSoft\Java Update\Policy" valueName="EnableJavaUpdate">
-		<parentCategory ref="Java" />
-		<supportedOn ref="win32" />
-		<enabledValue>
-			<decimal value="0" />
-		</enabledValue>
-		<disabledValue>
-			<decimal value="1" />
-		</disabledValue>
-	</policy>
-	<policy name="JavaAutoUpdate_Winx64" class="Machine" displayName="$(string.02_02)" explainText="$(string.02_02_00)" key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy" valueName="EnableJavaUpdate">
-		<parentCategory ref="Java" />
-		<supportedOn ref="amd64" />
-		<enabledValue>
-			<decimal value="0" />
-		</enabledValue>
-		<disabledValue>
-			<decimal value="1" />
-		</disabledValue>
-	</policy>
-      <policy 
-              name="OpenFileExplorerTo" 
-              class="User" 
-              displayName="$(string.OpenFileExplorerTo)"
-              explainText="$(string.OpenFileExplorerTo_Desc)"
-              key="SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
-              valueName="LaunchTo"
-              >
-          <parentCategory ref="Windows10" />
-          <supportedOn ref="Su_Windows_1511" />
-        <enabledValue>
-			<decimal value="1" />
-		</enabledValue>
-		<disabledValue>
-			<decimal value="2" />
-		</disabledValue>
-      </policy>
-  </policies>
+        <category name="Java" 
+                  displayName="$(string.C_Java)"
+                  explainText="$(string.C_Java_d)" >
+            <parentCategory ref="KyGP" />
+        </category>
+        <category name="Windows_10"
+                  displayName="$(string.C_Windows_10)"
+                  explainText="$(string.C_Windows_10_d)" >
+            <parentCategory ref="KyGP" />
+        </category>
+        <category name="Windows_10_ControlPanel"
+                  displayName="$(string.C_ControlPanel)"
+                  explainText="$(string.C_ControlPanel_d)" >
+            <parentCategory ref="Windows_10" />
+        </category>
+        <category name="Windows_10_ControlPanel_FileExplorerOptions"
+                  displayName="$(string.C_FileExplorerOptions)"
+                  explainText="$(string.C_ExplorerOptions_d)" >
+            <parentCategory ref="Windows_10_ControlPanel" />
+        </category>
+        <category name="Windows_10_Settings"
+                  displayName="$(string.C_Settings)"
+                  explainText="$(string.C_Settings_Windows_10_Settings_d)" >
+            <parentCategory ref="Windows_10" />
+        </category>
+        <category name="Windows_10_Settings_Personalisation"
+                  displayName="$(string.C_Personalisation)"
+                  explainText="$(string.C_Settings_Personalisation_d)" >
+            <parentCategory ref="Windows_10_Settings" />
+        </category>
+        <category name="Windows_10_Settings_Personalisation_Colours"
+                  displayName="$(string.C_Colours)"
+                  explainText="$(string.C_Windows_10_Settings_Personalisation_Colours_d)" >
+            <parentCategory ref="Windows_10_Settings_Personalisation" />
+        </category>
+    </categories>
+    <policies>
+        <policy name="AutoColorization"
+                class="User"
+                displayName="$(string.P_AutoColorization)"
+                explainText="$(string.P_AutoColorization_d)"
+                key="Control Panel\Desktop"
+                valueName="AutoColorization" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="Su_Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="ShowColourExptTitleBar"
+                class="User"
+                displayName="$(string.P_ShowColourExptTitleBar)"
+                explainText="$(string.P_ShowColourExptTitleBar_d)" key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" valueName="ColorPrevalence" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="Su_Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="ShowColourOnTitleBar"
+                class="User"
+                displayName="$(string.P_ShowColourOnTitleBar)"
+                explainText="$(string.P_ShowColourOnTitleBar_d)"
+                key="Software\Microsoft\Windows\DWM"
+                valueName="ColorPrevalence" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="Su_Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableJavaAutoUpdate_win32"
+                class="Machine"
+                displayName="$(string.P_DisableJavaAutoUpdate_win32)"
+                explainText="$(string.P_DisableJavaAutoUpdate_win32_d)"
+                key="SOFTWARE\JavaSoft\Java Update\Policy"
+                valueName="EnableJavaUpdate" >
+            <parentCategory ref="Java" />
+            <supportedOn ref="win32" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableJavaAutoUpdate_amd64"
+            class="Machine"
+            displayName="$(string.P_DisableJavaAutoUpdate_amd64)"
+            explainText="$(string.P_DisableJavaAutoUpdate_amd64_d)"
+            key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
+            valueName="EnableJavaUpdate" >
+            <parentCategory ref="Java" />
+            <supportedOn ref="amd64" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+        <policy name="OpenFileExplorerTo"
+                class="User"
+                displayName="$(string.P_OpenFileExplorerTo)"
+                explainText="$(string.P_OpenFileExplorerTo_d)"
+                key="SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+                valueName="LaunchTo" >
+            <parentCategory ref="Windows_10_ControlPanel_FileExplorerOptions" />
+            <supportedOn ref="Su_Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="2" />
+            </disabledValue>
+        </policy>
+    </policies>
 </policyDefinitions>
