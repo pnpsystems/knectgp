@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.2r1 -->
+<!-- Version: 0.3.0 -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.2"
+    revision="0.3"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions"
 >
@@ -11,11 +11,75 @@
 	<description>KyGP - Group Policy Administrative Template Pack</description>
 	<resources>
 		<stringTable>
-			<string id="KyGP">KyGP</string>
-			<string id="KyGP_Desc">These's polcies were created for specific purposes, such as enabling via Group Policiy, user settings that exist on Windows but did not exist in the Vanilla Group Policy templates.
+            <!-- Category Definitions -->
+            <string id="C_Colours">Colours</string>
+            <string id="C_ControlPanel">Control Panel</string>
+            <string id="C_FileExplorerOptions">File Explorer Options</string>
+            <string id="C_Java">Java</string>
+			<string id="C_KyGP">KyGP</string>
+            <string id="C_Personalisation">Personalisation</string>
+            <string id="C_Settings">Settings</string>
+            <string id="C_Windows_10">Windows 10</string>
             
-Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
-			</string>
+            <!-- Category Descriptions -->
+                <!-- Tabs inside the <string> show in Group Policy Management Editor, this is why the <strings>'s are untabbed! -->
+<string id="C_ControlPanel_d">Items that appear in the control panel will show up in here!</string>
+<string id="C_ExplorerOptions_d">Settings for how Windows/File Explorer work will appear here!</string>
+<string id="C_Java_d">Settings for Java Runtime Environment</string>
+<string id="C_KyGP_d">These policies were created for specific purposes, such as enabling via Group Policiy the user settings that exist on Windows that do not exist in the Vanilla Group Policy templates.
+
+Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk! or perform a Pull Request on GitHub at https://github.com/kyit/kygp</string>
+<string id="C_Settings_Personalisation_d">Control Personalisation Options from the Settings App!</string>
+<string id="C_Settings_Windows_10_Settings_d">Controls for Options that live in the Settings App on Windows 10!</string>
+<string id="C_Windows_10_d">Controls for Windows 10</string>
+<string id="C_Windows_10_Settings_Personalisation_Colours_d">Control the options for the settings located in Colours, in Personalisation on the Settings App on Windows 10!</string>
+            
+            <!-- Policy Definitions -->
+            <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
+            <string id="P_DisableJavaAutoUpdate_amd64">Prevent Java AutoUpdater from Running (64-bit Windows)</string>
+            <string id="P_DisableJavaAutoUpdate_win32">Prevent Java AutoUpdater from Running (32-bit Windows)</string>
+            <string id="P_OpenFileExplorerTo">Prevent File Explorer opening to Quick Access</string>
+            <string id="P_ShowColourExptTitleBar">Enable Show Colour on Start, Taskbar and Action Center</string>
+            <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>
+            
+            <!-- Policy Descriptions -->
+                <!-- Tabs inside the <string> show in Group Policy Management Editor, this is why the <strings>'s are untabbed! -->
+<string id="P_AutoColorization_d">Not configuring this object will not remove the policy. 
+    It simply stops applying during user logon.
+
+Enabled: This puts the switch in the on poisition.
+Disabled: This puts the switch in the off poisition. (Default for Windows 10)</string>
+<string id="P_DisableJavaAutoUpdate_amd64_d">This setting disables the call for Java AutoUpdater.
+Not Configuring this policy stops enforcing the change. To reverse it you must disable this policy or reinstall Java.
+                
+Enabled: Disables Java AutoUpdater                
+Disabled: Enables Java AutoUpdater
+
+Please note: This policy only affects 64-bit Windows.</string>
+<string id="P_DisableJavaAutoUpdate_win32_d">This setting disables the call for Java AutoUpdater.
+Not Configuring this policy stops enforcing the change. To reverse it you must disable this policy or reinstall Java.
+                
+Enabled: Disables Java AutoUpdater                
+Disabled: Enables Java AutoUpdater
+
+Please note: This policy only affects 32-bit installations Windows!
+</string>
+<string id="P_OpenFileExplorerTo_d">Not configuring this object will not remove the policy. 
+    It simply stops applying during user logon.
+            
+Enabling this policy sets File Explorer to open to This PC by default, showing network drives and portable meda straight away rather than the Default Windows option of opening Quick Access. Disabling this policy however will apply the setting for Quick Access to be default.</string>
+<string id="P_ShowColourExptTitleBar_d">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+
+Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Windows Aero enabled area's, such as Start, Taskbar and the Notification and Action Center. It doesn't affect the Title Bars on Applications!
+Disabling this policy however sets the Windows Aero areas back to Windows 10's default colour of Black.</string>
+<string id="P_ShowColourOnTitleBar_d">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+
+Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
+Disabling this policy however sets the Title Bars to Windows 10's default colour of White.</string>
+            
+            <!-- Supported On Definitions -->
 			<string id="win32">Affects 32-bit!</string>
 			<string id="amd64">Affects 64-bit!</string>
             <!-- Windows -->
@@ -108,56 +172,9 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             <string id="Su_Windows_10586">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
             <string id="Su_Windows_TH2">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
             <string id="Su_Windows_1511">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
-            <string id="Su_Windows_RS1">At least Windows 10 or Windows Server 2016 Technical Preview 5 (10.0.14365)</string>
+            <!--<string id="Su_Windows_RS1">At least Windows 10 or Windows Server 2016 Technical Preview 5 (10.0.14365)</string>-->
             
             <!-- End of SU -->
-            
-            <string id="01">Windows 10</string>
-     			<string id="01_00">Controls for Windows 10</string>
-			<string id="01_01">Settings - Personalisation - Colours</string>
-      			<string id="01_01_00">As title describes</string>
-      			<string id="01_01_01">Specify control of automatic accent colour picking</string>
-      			<string id="01_01_01_00">Not configured will not remove the policy. 
-	It simply stops enforcing.
-
-Enabled turns on the setting in Settings>Personalisation>Colours.
-Disabled turns it off.
-			</string>
-			<string id="01_01_02">Enable Show Colour on Start, Taskbar and Action Center</string>
-			<string id="01_01_02_00">Not configured will to remove the policy.
-	It simply stops enforcing.
-
-Enabled turns on the setting to Show Colours on Start, Taskbar and Action Center, but it doesn't affect the Title Bars.
-
-Disabled turns it off.
-			</string>
-			<string id="01_01_03">Enable Show Colour on Title Bar</string>
-			<string id="01_01_03_00">Not configured will not remove the policy.
-	It simply stops enforcing.
-
-Enabled turns on the setting to Show Colours on the Title Bars.
-
-Disabled turns it off. 
-			</string>
-			<string id="Java">Java</string>
-			<string id="Java_Desc">Settings for Java Runtime Environment</string>
-			<string id="02_01">Disable AutoUpdate for Java (32-bit Windows)</string>
-			<string id="02_01_00">This setting disables Auto Update for Java.
-
-Not Configured stops enforcing the policy.
-Enabled: disables Java Auto Update.
-Disabled: enables Java Auto Update.
-
-Please note, this policy only affects 32-bit Windows.
-</string>
-			<string id="02_02">Disable AutoUpdate for Java (64-bit Windows)</string>
-			<string id="02_02_00">This setting disables Auto Update for Java.
-
-Not Configured stops enforcing the policy.
-Enabled: disables Java Auto Update.
-Disabled: enables Java Auto Update.
-
-Please note, this policy only affects 64-bit Windows.</string>
     		</stringTable>
   	</resources>
 </policyDefinitionResources>
