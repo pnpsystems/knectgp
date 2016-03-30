@@ -35,12 +35,12 @@
         </definitions>
   	</supportedOn>
   <categories>
-	<category name="kyit" displayName="$(string.00)" explainText="$(string.00_00)"></category>
-	<category name="java" displayName="$(string.02)" explainText="$(string.02_00)">
-		<parentCategory ref="kyit" />
+	<category name="KyGP" displayName="$(string.KyGP)" explainText="$(string.KyGP_Desc)"></category>
+	<category name="Java" displayName="$(string.Java)" explainText="$(string.Java_Desc)">
+		<parentCategory ref="KyGP" />
 	</category>
 	<category name="Windows10" displayName="$(string.01)" explainText="$(string.01_00)">
-		<parentCategory ref="kyit" />
+		<parentCategory ref="KyGP" />
 	</category>
 	<category name="Windows10Colours" displayName="$(string.01_01)" explainText="$(string.01_01_00)">
 		<parentCategory ref="Windows10" />
@@ -97,5 +97,7 @@
 			<decimal value="1" />
 		</disabledValue>
 	</policy>
+      <!-- Key HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -->
+      <!-- valueName="LaunchTo" 1 this pc - 2 quick access -->
   </policies>
 </policyDefinitions>
