@@ -4,7 +4,7 @@
 
 Release 0.3.0 is has been a big step!
 
-Not only have I crushed some big issues with how I started off KyGP - cough #5
+Not only have I crushed some big issues with how I started off KyGP - cough https://github.com/KyIT/KyGP/issues/5
 
 I now have a standardised format in how the policies are now written and how the localisation is done!
 
@@ -24,7 +24,7 @@ So that happened :)
 
 A new policy was also added!
 
-Details are here - #3
+Details are here - https://github.com/KyIT/KyGP/issues/3
 
 And thats that for 0.3! 
 
