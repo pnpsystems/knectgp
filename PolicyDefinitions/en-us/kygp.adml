@@ -47,8 +47,8 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
 <string id="P_AutoColorization_d">Not configuring this object will not remove the policy. 
     It simply stops applying during user logon.
 
-Enabled: This puts the switch in the on poisition.
-Disabled: This puts the switch in the off poisition. (Default for Windows 10)</string>
+Enabled: This puts the switch in the on position.
+Disabled: This puts the switch in the off position. (Default for Windows 10)</string>
 <string id="P_DisableJavaAutoUpdate_amd64_d">This setting disables the call for Java AutoUpdater.
 Not Configuring this policy stops enforcing the change. To reverse it you must disable this policy or reinstall Java.
                 
