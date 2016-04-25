@@ -172,6 +172,7 @@
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
+            <supportedOn ref="Su_WindowsVista" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -186,6 +187,7 @@
                 key="SOFTWARE\Microsoft\Security Center"
                 valueName="FirewallDisableNotify" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
+            <supportedOn ref="Su_Windows_1511" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
