@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.3.1 -->
+<!-- Version: 0.4 -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.3"
+    revision="0.4"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions"
 >
@@ -18,7 +18,10 @@
             <string id="C_Java">Java</string>
 			<string id="C_KyGP">KyGP</string>
             <string id="C_Personalisation">Personalisation</string>
+            <string id="C_SecurityAndMaintenance">Security and Maintenance</string>
             <string id="C_Settings">Settings</string>
+            <string id="C_TurnMessagesOnOrOff">Turn messages on or off</string>
+            <string id="C_Windows">Windows</string>
             <string id="C_Windows_10">Windows 10</string>
             
             <!-- Category Descriptions -->
@@ -38,6 +41,8 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
             <string id="P_DisableJavaAutoUpdate_amd64">Prevent Java AutoUpdater from Running (64-bit Windows)</string>
             <string id="P_DisableJavaAutoUpdate_win32">Prevent Java AutoUpdater from Running (32-bit Windows)</string>
+            <string id="P_DisableWindowsBackupMonitoring">Disable Monitoring of Windows Backup</string>
+            <string id="P_DisableWindowsFirewallMonitoring">Disable Monitoring of Windows Firewall</string>
             <string id="P_OpenFileExplorerTo">Prevent File Explorer opening to Quick Access</string>
             <string id="P_ShowColourExptTitleBar">Enable Show Colour on Start, Taskbar and Action Center</string>
             <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>
@@ -78,6 +83,10 @@ Disabling this policy however sets the Windows Aero areas back to Windows 10's d
 
 Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
 Disabling this policy however sets the Title Bars to Windows 10's default colour of White.</string>
+            
+            <!-- Place holders -->
+                        <string id="C_d">Placeholder!</string>
+                        <string id="P_d">Placeholder!</string>
             
             <!-- Supported On Definitions -->
 			<string id="win32">Affects 32-bit!</string>
