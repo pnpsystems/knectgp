@@ -176,9 +176,9 @@
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
-            <disableValue>
+            <disabledValue>
                 <decimal value="0" />
-            </disableValue>
+            </disabledValue>
         </policy>
         <policy name="DisableWindowsFirewallMonitoring"
                 class="Machine"
@@ -191,9 +191,9 @@
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
-            <disableValue>
+            <disabledValue>
                 <decimal value="0" />
-            </disableValue>
+            </disabledValue>
         </policy>
     </policies>
 </policyDefinitions>
