@@ -8,13 +8,17 @@
     xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
     <policyNamespaces>
         <target prefix="KyGP" namespace="KyIT.KyGP" />
-        <using prefix="windows" namespace="Microsoft.Policies.Windows" />
     </policyNamespaces>
+    <supersededAdm fileName="kidrex.adm" />
     <resources minRequiredRevision="0.4" />
         <supportedOn>
             <definitions>
-                <definition name="win32" displayName="$(string.win32)" />
-                <definition name="amd64" displayName="$(string.amd64)" />
+                <definition name="Su_win32" displayName="$(string.Su_win32)" />
+                <definition name="Su_amd64" displayName="$(string.Su_amd64)" />
+                <definition name="Su_O16" displayName="$(string.Su_O16)" />
+                <definition name="Su_O16_PowerPoint" displayName="$(string.Su_O16_PowerPoint)" />
+                <definition name="Su_IE7" displayName="$(string.Su_IE7)" />
+                <definition name="Su_WindowsVista" displayName="$(string.Su_WindowsVista)" />
                 <definition name="Su_Windows_1511" displayName="$(string.Su_Windows_1511)" />
             </definitions>
         </supportedOn>
@@ -23,6 +27,11 @@
                   displayName="$(string.C_KyGP)"
                   explainText="$(string.C_KyGP_d)"
         />
+        <category name="IE"
+                  displayName="$(string.C_IE)"
+                  explainText="$(string.C_d)" >
+            <parentCategory reg="KyGP" />
+        </category>
         <category name="Java" 
                   displayName="$(string.C_Java)"
                   explainText="$(string.C_Java_d)" >
@@ -127,7 +136,7 @@
                 key="SOFTWARE\JavaSoft\Java Update\Policy"
                 valueName="EnableJavaUpdate" >
             <parentCategory ref="Java" />
-            <supportedOn ref="win32" />
+            <supportedOn ref="Su_win32" />
             <enabledValue>
                 <decimal value="0" />
             </enabledValue>
@@ -142,7 +151,7 @@
             key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
             valueName="EnableJavaUpdate" >
             <parentCategory ref="Java" />
-            <supportedOn ref="amd64" />
+            <supportedOn ref="Su_amd64" />
             <enabledValue>
                 <decimal value="0" />
             </enabledValue>
@@ -180,7 +189,7 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="DisableWindowsFirewallMonitoring"
+<!--        <policy name="DisableWindowsFirewallMonitoring"
                 class="Machine"
                 displayName="$(string.P_DisableWindowsFirewallMonitoring)"
                 explainText="$(string.P_d)"
@@ -188,6 +197,68 @@
                 valueName="FirewallDisableNotify" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
             <supportedOn ref="Su_Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy> -->
+        <policy name="KidrexDefaultSearchEngine"
+                class="User"
+                displayName="$(string.P_KidrexDefaultSearchEngine)"
+                explainText="$(string.P_d)"
+                key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
+            <parentCategory ref="IE" />
+            <supportedOn ref="Su_IE7" />
+            <enabledList>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      value="DisplayName" >
+                    <value>
+                        <string>Kidrex</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      value="URL" >
+                    <value>
+                        <string>http://www.kidrex.org/results/?q={searchTerms}&cof=FORID%3A10&ie=UTF-8&safe=high&cx=005531940451544459472%3A_wxzudlmale</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      value="ShowSearchSuggestions" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      value="FaviconURL" >
+                    <value>
+                        <string>http://www.kidrex.org/favicon.ico</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
+                      value="DefaultScope" >
+                    <value>
+                        <string>{FEA49DE7-D02E-424C-8D3B-4E5919428355}</string>
+                    </value>
+                </item>
+            </enabledList>
+            <disabledList>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
+                      value="DefaultScope" >
+                    <value><!-- bing.com -->
+                        <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
+                    </value>
+                </item>
+            </disabledList>
+        </policy>
+        <policy name="O16_DisableTopology"
+                class="User"
+                displayName="$(string.P_O16_DisableTopology)"
+                explainText="$(string.P_d)"
+                key="SOFTWARE\Microsoft\Office\16.0\PowerPoint\Options"
+                valueName="DisableSetTopology" >
+            <supportedOn ref="Su_O16_PowerPoint" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
