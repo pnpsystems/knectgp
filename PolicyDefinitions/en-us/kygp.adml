@@ -51,7 +51,7 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             <string id="P_DisableJavaAutoUpdate_win32">Prevent Java AutoUpdater from Running (32-bit Windows)</string>
             <string id="P_DisableWindowsBackupMonitoring">Disable Monitoring of Windows Backup</string>
             <string id="P_DisableWindowsFirewallMonitoring">Disable Monitoring of Windows Firewall</string>
-            <string id="P_KidrexSearchEngine">Make Kidrex the Default Search Engine</string>
+            <string id="P_KidrexDefaultSearchEngine">Make Kidrex the Default Search Engine</string>
             <string id="P_OpenFileExplorerTo">Prevent File Explorer opening to Quick Access</string>
             <string id="P_ShowColourExptTitleBar">Enable Show Colour on Start, Taskbar and Action Center</string>
             <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>

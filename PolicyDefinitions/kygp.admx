@@ -30,7 +30,7 @@
         <category name="IE"
                   displayName="$(string.C_IE)"
                   explainText="$(string.C_d)" >
-            <parentCategory reg="KyGP" />
+            <parentCategory ref="KyGP" />
         </category>
         <category name="Java" 
                   displayName="$(string.C_Java)"
@@ -213,31 +213,31 @@
             <supportedOn ref="Su_IE7" />
             <enabledList>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
-                      value="DisplayName" >
+                      valueName="DisplayName" >
                     <value>
                         <string>Kidrex</string>
                     </value>
                 </item>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
-                      value="URL" >
+                      valueName="URL" >
                     <value>
                         <string>http://www.kidrex.org/results/?q={searchTerms}&cof=FORID%3A10&ie=UTF-8&safe=high&cx=005531940451544459472%3A_wxzudlmale</string>
                     </value>
                 </item>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
-                      value="ShowSearchSuggestions" >
+                      valueName="ShowSearchSuggestions" >
                     <value>
                         <decimal value="1" />
                     </value>
                 </item>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
-                      value="FaviconURL" >
+                      valueName="FaviconURL" >
                     <value>
                         <string>http://www.kidrex.org/favicon.ico</string>
                     </value>
                 </item>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
-                      value="DefaultScope" >
+                      valueName="DefaultScope" >
                     <value>
                         <string>{FEA49DE7-D02E-424C-8D3B-4E5919428355}</string>
                     </value>
@@ -245,7 +245,7 @@
             </enabledList>
             <disabledList>
                 <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
-                      value="DefaultScope" >
+                      valueName="DefaultScope" >
                     <value><!-- bing.com -->
                         <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
                     </value>
