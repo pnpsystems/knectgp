@@ -15,11 +15,60 @@
             <definitions>
                 <definition name="Su_win32" displayName="$(string.Su_win32)" />
                 <definition name="Su_amd64" displayName="$(string.Su_amd64)" />
+                <definition name="Su_Java" displayName="$(string.Su_Java)" />
+                <definition name="Su_IE7" displayName="$(string.Su_IE7)" />
+                <definition name="Su_IE8" displayName="$(string.Su_IE8)" />
+                <definition name="Su_IE9" displayName="$(string.Su_IE9)" />
+                <definition name="Su_IE10" displayName="$(string.Su_IE10)" />
+                <definition name="Su_IE11" displayName="$(string.Su_IE11)" />
+                <definition name="Su_Edge" displayName="$(string.Su_Edge)" />
+                <definition name="Su_O13" displayName="$(string.Su_O13)" />
+                <definition name="Su_O14" displayName="$(string.Su_O14)" />
+                <definition name="Su_O14_PowerPoint" displayName="$(string.Su_O14_PowerPoint)" />
+                <definition name="Su_O15" displayName="$(string.Su_O15)" />
+                <definition name="Su_O15_PowerPoint" displayName="$(string.Su_O15_PowerPoint)" />
                 <definition name="Su_O16" displayName="$(string.Su_O16)" />
                 <definition name="Su_O16_PowerPoint" displayName="$(string.Su_O16_PowerPoint)" />
-                <definition name="Su_IE7" displayName="$(string.Su_IE7)" />
                 <definition name="Su_WindowsVista" displayName="$(string.Su_WindowsVista)" />
+                <definition name="Su_WindowsVista_SP1" displayName="$(string.Su_WindowsVista_SP1)" />
+                <definition name="Su_WindowsVista_SP2" displayName="$(string.Su_WindowsVista_SP2)" />
+                <definition name="Su_Windows7" displayName="$(string.Su_Windows7)" />
+                <definition name="Su_Windows7_SP1" displayName="$(string.Su_Windows7_SP1)" />
+                <definition name="Su_Windows8" displayName="$(string.Su_Windows8)" />
+                <definition name="Su_Windows8_1" displayName="$(string.Su_Windows8_1)" />
+                <definition name="Su_Windows8_1u" displayName="$(string.Su_Windows8_1u)" />
+                <definition name="Su_Windows10_RTM" displayName="$(string.Su_Windows10_RTM)" />
+                <definition name="Su_Windows10_TH1" displayName="$(string.Su_Windows10_TH1)" />
+                <definition name="Su_Windows10_10240" displayName="$(string.Su_Windows10_10240)" />
+                <definition name="Su_Windows10_1507" displayName="$(string.Su_Windows10_1507)" />
+                <definition name="Su_Windows10_TH2" displayName="$(string.Su_Windows10_TH2)" />
+                <definition name="Su_Windows10_10586" displayName="$(string.Su_Windows10_10586)" />
+                <definition name="Su_Windows10_1511" displayName="$(string.Su_Windows10_1511)" />
+                <definition name="Su_Windows10" displayName="$(string.Su_Windows10)" />
+                <definition name="Su_Windows10_RS1" displayName="$(string.Su_Windows10_RS1)" />
+                <definition name="Su_WindowsSrv2k8" displayName="$(string.Su_WindowsSrv2k8)" />
+                <definition name="Su_WindowsSrv2k8_SP1" displayName="$(string.Su_WindowsSrv2k8_SP1)" />
+                <definition name="Su_WindowsSrv2k8_SP2" displayName="$(string.Su_WindowsSrv2k8_SP2)" />
+                <definition name="Su_WindowsSrv2k8R2" displayName="$(string.Su_WindowsSrv2k8R2)" />
+                <definition name="Su_WindowsSrv2k8R2_SP1" displayName="$(string.Su_WindowsSrv2k8R2_SP1)" />
+                <definition name="Su_WindowsSrv2012" displayName="$(string.Su_WindowsSrv2012)" />
+                <definition name="Su_WindowsSrv2012R2" displayName="$(string.Su_WindowsSrv2012R2)" />
+                <definition name="Su_WindowsSrv2012R2u" displayName="$(string.Su_WindowsSrv2012R2u)" />
+                <definition name="Su_WindowsSrv2016" displayName="$(string.Su_WindowsSrv2016)" />
+                <definition name="Su_Windows_6000" displayName="$(string.Su_Windows_6000)" />
+                <definition name="Su_Windows_6001" displayName="$(string.Su_Windows_6001)" />
+                <definition name="Su_Windows_6002" displayName="$(string.Su_Windows_6002)" />
+                <definition name="Su_Windows_7600" displayName="$(string.Su_Windows_7600)" />
+                <definition name="Su_Windows_7601" displayName="$(string.Su_Windows_7601)" />
+                <definition name="Su_Windows_9200" displayName="$(string.Su_Windows_9200)" />
+                <definition name="Su_Windows_9600" displayName="$(string.Su_Windows_9600)" />
+                <definition name="Su_Windows_9600u" displayName="$(string.Su_Windows_9600u)" />
+                <definition name="Su_Windows_9841" displayName="$(string.Su_Windows_9841)" />
+                <definition name="Su_Windows_10074" displayName="$(string.Su_Windows_10074)" />
+                <definition name="Su_Windows_10586" displayName="$(string.Su_Windows_10586)" />
+                <definition name="Su_Windows_TH2" displayName="$(string.Su_Windows_TH2)" />
                 <definition name="Su_Windows_1511" displayName="$(string.Su_Windows_1511)" />
+                <definition name="Su_Windows_RS1" displayName="$(string.Su_Windows_RS1)" />
             </definitions>
         </supportedOn>
     <categories>
@@ -29,13 +78,48 @@
         />
         <category name="IE"
                   displayName="$(string.C_IE)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_IE_d)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Java" 
                   displayName="$(string.C_Java)"
                   explainText="$(string.C_Java_d)" >
             <parentCategory ref="KyGP" />
+        </category>
+        <category name="Office"
+                  displayName="$(string.C_Office)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="KyGP" />
+        </category>
+        <category name="O14"
+                  displayName="$(string.C_Office14)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O14_PowerPoint"
+                  displayName="$(string.C_Office14_PowerPoint)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="O14" />
+        </category>
+        <category name="O15"
+                  displayName="$(string.C_Office15)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O15_PowerPoint"
+                  displayName="$(string.C_Office15_PowerPoint)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="O15" />
+        </category>
+        <category name="O16"
+                  displayName="$(string.C_Office16)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O16_PowerPoint"
+                  displayName="$(string.C_Office16_PowerPoint)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="O16" />
         </category>
         <category name="Windows"
                   displayName="$(string.C_Windows)"
@@ -129,35 +213,41 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="DisableJavaAutoUpdate_win32"
+        <policy name="DisableJavaAutoUpdate"
                 class="Machine"
-                displayName="$(string.P_DisableJavaAutoUpdate_win32)"
-                explainText="$(string.P_DisableJavaAutoUpdate_win32_d)"
-                key="SOFTWARE\JavaSoft\Java Update\Policy"
-                valueName="EnableJavaUpdate" >
+                displayName="$(string.P_DisableJavaAutoUpdate)"
+                explainText="$(string.P_DisableJavaAutoUpdate_d)"
+                key="SOFTWARE\JavaSoft\Java Update\Policy" >
             <parentCategory ref="Java" />
-            <supportedOn ref="Su_win32" />
-            <enabledValue>
-                <decimal value="0" />
-            </enabledValue>
-            <disabledValue>
-                <decimal value="1" />
-            </disabledValue>
-        </policy>
-        <policy name="DisableJavaAutoUpdate_amd64"
-            class="Machine"
-            displayName="$(string.P_DisableJavaAutoUpdate_amd64)"
-            explainText="$(string.P_DisableJavaAutoUpdate_amd64_d)"
-            key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
-            valueName="EnableJavaUpdate" >
-            <parentCategory ref="Java" />
-            <supportedOn ref="Su_amd64" />
-            <enabledValue>
-                <decimal value="0" />
-            </enabledValue>
-            <disabledValue>
-                <decimal value="1" />
-            </disabledValue>
+            <supportedOn ref="Su_Java" />
+            <enabledList>
+                <item key="SOFTWARE\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+            </enabledList>
+            <disabledList>
+                <item key="SOFTWARE\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
+            </disabledList>
         </policy>
         <policy name="OpenFileExplorerTo"
                 class="User"
@@ -189,21 +279,6 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-<!--        <policy name="DisableWindowsFirewallMonitoring"
-                class="Machine"
-                displayName="$(string.P_DisableWindowsFirewallMonitoring)"
-                explainText="$(string.P_d)"
-                key="SOFTWARE\Microsoft\Security Center"
-                valueName="FirewallDisableNotify" >
-            <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
-            <supportedOn ref="Su_Windows_1511" />
-            <enabledValue>
-                <decimal value="1" />
-            </enabledValue>
-            <disabledValue>
-                <decimal value="0" />
-            </disabledValue>
-        </policy> -->
         <policy name="KidrexDefaultSearchEngine"
                 class="User"
                 displayName="$(string.P_KidrexDefaultSearchEngine)"
@@ -212,34 +287,40 @@
             <parentCategory ref="IE" />
             <supportedOn ref="Su_IE7" />
             <enabledList>
-                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
                       valueName="DisplayName" >
                     <value>
                         <string>Kidrex</string>
                     </value>
                 </item>
-                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
                       valueName="URL" >
                     <value>
-                        <string>http://www.kidrex.org/results/?q={searchTerms}&cof=FORID%3A10&ie=UTF-8&safe=high&cx=005531940451544459472%3A_wxzudlmale</string>
+                        <string>http://www.kidrex.org/results/?q={searchTerms}</string>
                     </value>
                 </item>
-                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
                       valueName="ShowSearchSuggestions" >
                     <value>
                         <decimal value="1" />
                     </value>
                 </item>
-                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
                       valueName="FaviconURL" >
                     <value>
                         <string>http://www.kidrex.org/favicon.ico</string>
                     </value>
                 </item>
-                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes"
                       valueName="DefaultScope" >
                     <value>
                         <string>{FEA49DE7-D02E-424C-8D3B-4E5919428355}</string>
+                    </value>
+                </item>
+                <item key="Software\Policies\Microsoft\Internet Explorer\Infodelivery\Restrictions"
+                      valueName="UsePolicySearchProvidersOnly" >
+                    <value>
+                        <decimal value="1" />
                     </value>
                 </item>
             </enabledList>
@@ -250,15 +331,52 @@
                         <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
                     </value>
                 </item>
+                <item key="Software\Policies\Microsoft\Internet Explorer\Infodelivery\Restrictions"
+                      valueName="UsePolicySearchProvidersOnly" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
             </disabledList>
         </policy>
         <policy name="O16_DisableTopology"
                 class="User"
-                displayName="$(string.P_O16_DisableTopology)"
-                explainText="$(string.P_d)"
+                displayName="$(string.P_DisableTopology)"
+                explainText="$(string.P_DisableTopology_d)"
                 key="SOFTWARE\Microsoft\Office\16.0\PowerPoint\Options"
                 valueName="DisableSetTopology" >
+            <parentCategory ref="O16_PowerPoint" />
             <supportedOn ref="Su_O16_PowerPoint" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="O15_DisableUseMonMgr"
+                class="User"
+                displayName="$(string.P_DisableUseMonMgr)"
+                explainText="$(string.P_DisableUseMonMgr_d)"
+                key="SOFTWARE\Microsoft\Office\15.0\PowerPoint\Options"
+                valueName="UseMonMgr" >
+            <parentCategory ref="O15_PowerPoint" />
+            <supportedOn ref="Su_O15_PowerPoint" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="O14_DisableUseMonMgr"
+                class="User"
+                displayName="$(string.P_DisableUseMonMgr)"
+                explainText="$(string.P_DisableUseMonMgr_d)"
+                key="SOFTWARE\Microsoft\Office\14.0\PowerPoint\Options"
+                valueName="UseMonMgr" >
+            <parentCategory ref="O14_PowerPoint" />
+            <supportedOn ref="Su_O14_PowerPoint" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
