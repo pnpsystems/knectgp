@@ -88,42 +88,42 @@
         </category>
         <category name="Office"
                   displayName="$(string.C_Office)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office_d)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="O14"
                   displayName="$(string.C_Office14)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office14_d)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O14_PowerPoint"
                   displayName="$(string.C_Office14_PowerPoint)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office14_PowerPoint_d)" >
             <parentCategory ref="O14" />
         </category>
         <category name="O15"
                   displayName="$(string.C_Office15)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office15_d)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O15_PowerPoint"
                   displayName="$(string.C_Office15_PowerPoint)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office15_PowerPoint_d)" >
             <parentCategory ref="O15" />
         </category>
         <category name="O16"
                   displayName="$(string.C_Office16)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office16_d)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O16_PowerPoint"
                   displayName="$(string.C_Office16_PowerPoint)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Office16_PowerPoint_d)" >
             <parentCategory ref="O16" />
         </category>
         <category name="Windows"
                   displayName="$(string.C_Windows)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_Windows_d)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Windows_ControlPanel"
@@ -133,7 +133,7 @@
         </category>
         <category name="Windows_ControlPanel_SecurityAndMaintenance"
                   displayName="$(string.C_SecurityAndMaintenance)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.C_SecurityAndMaintenance_d)" >
             <parentCategory ref="Windows_ControlPanel" />
         </category>
         <category name="Windows_10"
@@ -267,7 +267,7 @@
         <policy name="DisableWindowsBackupMonitoring"
                 class="Machine"
                 displayName="$(string.P_DisableWindowsBackupMonitoring)"
-                explainText="$(string.P_d)"
+                explainText="$(string.P_DisableWindowsBackupMonitoring_d)"
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
@@ -282,7 +282,7 @@
         <policy name="KidrexDefaultSearchEngine"
                 class="User"
                 displayName="$(string.P_KidrexDefaultSearchEngine)"
-                explainText="$(string.P_d)"
+                explainText="$(string.P_KidrexDefaultSearchEngine_d)"
                 key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
             <parentCategory ref="IE" />
             <supportedOn ref="Su_IE7" />

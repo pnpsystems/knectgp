@@ -46,6 +46,15 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
 <string id="C_Settings_Windows_10_Settings_d">Controls for Options that live in the Settings App on Windows 10!</string>
 <string id="C_Windows_10_d">Controls for Windows 10</string>
 <string id="C_Windows_10_Settings_Personalisation_Colours_d">Control the options for the settings located in Colours, in Personalisation on the Settings App on Windows 10!</string>
+<string id="C_Office_d">Options configurable for Microsoft Office Products</string>
+<string id="C_Office14_d">Options configurable for Office 2010 Products</string>
+<string id="C_Office14_PowerPoint_d">Options configurable for PowerPoint 2010</string>
+<string id="C_Office15_d">Options configurable for Office 2013 Products</string>
+<string id="C_Office15_PowerPoint_d">Options configurable for PowerPoint 2013</string>
+<string id="C_Office16_d">Options configurable for Office 2013 Products</string>
+<string id="C_Office16_PowerPoint_d">Options configurable for PowerPoint 2016</string>
+<string id="C_Windows_d">Change settings across versions of Windows</string>
+<string id="C_SecurityAndMaintainance_d">Look here for settings in the Action Center for Windows Vista and 7 as well as the Security and Maintainance area on Windows 8 and 10</string>
             
             <!-- Policy Definitions -->
             <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
@@ -105,6 +114,20 @@ Disabling this policy however sets the Windows Aero areas back to Windows 10's d
 
 Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
 Disabling this policy however sets the Title Bars to Windows 10's default colour of White.</string>
+<string id="P_DisableWindowsBackupMonitoring_d">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+
+Enabling this policy stops the Windows Backup monitoring that is part and parcel of the Action Center/Security and Maintainance options.
+
+However disabling this policy will enforce it to be on all the time, as long as this policy is set.</string>
+<string id="P_KidrexDefaultSearchEngine_d">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+
+When this policy is enabled, it inserts into the Group Policy Search Scopes for Internet Explorer the required values for the Kidrex search engine to function from the address bar and/or search bar. It then enables the option that restricts Internet Explorer to using only those search engines listed in Group Policy. It then also sets Kidrex to be the default search engine.
+
+Disabling this policy will stop enforcing the Group Policy Search Scopes to be used and will set Bing! to be default.
+    
+Leaving this to not configured will allow other policies or methods to be used, such as IEAK.</string>
             
             <!-- Place holders -->
             <string id="C_d">Placeholder!</string>
@@ -157,7 +180,7 @@ Disabling this policy however sets the Title Bars to Windows 10's default colour
             <string id="Su_Windows10_1511">At least Windows 10 Nov'15 (10.0.10586)</string>
             <string id="Su_Windows10">At least Windows 10 Nov'15 (10.0.10586)</string>
             <!-- Windows 10 Redstone 1 -->
-            <string id="Su_Windows10_14332">At least Windows 10 (10.0.14332)</string>
+            <string id="Su_Windows10_14342">At least Windows 10 (10.0.14342)</string>
             <string id="Su_Windows10_RS1">At least Windows 10 Redstone 1</string>
             
             <!-- Windows Servers --><!-- Windows Server 2008 -->
