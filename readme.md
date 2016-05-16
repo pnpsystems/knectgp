@@ -1,33 +1,20 @@
 #KyGP
 
-## Release 0.3.0
+## Release 0.4.0
 
-Release 0.3.0 is has been a big step!
+Version v0.4.0! Yet another large step in KyGP’s functionality
+Two of the things that have been fathomed recently, is the method to apply settings that use strings (REG_SZ) and the method to apply multiple (REG_SZ and (REG_DWORD) keys at the same time.
 
-Not only have I crushed some big issues with how I started off KyGP - cough https://github.com/KyIT/KyGP/issues/5
+An example of applying multiple keys is the Prevent Java AutoUpdater policy we had.
 
-I now have a standardised format in how the policies are now written and how the localisation is done!
+Instead of having two separate policies or 32-bit Operating Systems and 64-bit Operating Systems, they have now been rolled into one; The benefit of doing this is that it minifies our lines somewhat, reduces the amount of policies we have on show and let’s face it, it looks tidier. :+1:
 
-Just a quick overview on the definitions in the ADML
+We have also expanded further into managing settings in Microsoft Office, namely PowerPoint and also more complex items such as Search Engines in Internet Explorer (Edge will be looked into and other browsers may follow)
 
-Prefix | Description | Explination
------- | ----------- | -----------
-C_ | Category Definitions | These are essentially the names of the folder in the Group Policy Admin Pack.
-P_ | Policiy Definitions | These are the names of the Policies, i.e. Prevent this from happening.
-Su_ | supportedOn Definitions | This is the huge list of Windows Operating Systems that has been cultivated to allow for granular requirement descriptions!
+And that’s that for v0.4.0!
 
-Suffix | Description | Explination
------- | ----------- | -----------
-_d | Definition Description | This is the description of the Definition that is selected when browing in the Group Policy Management Editor, for Policies this is what shows up on the right hand side :+1:
+We have big plans for v0.5.0 and hopefully we won’t have a v0.4.1 ;-) We take our quality control seriously and test each policy in a mixed client domain, with a Windows Server 2016 Preview Domain Controller and 7 to 10 Clients, sometimes for a laugh we do boot up an XP machine.
 
-So that happened :)
-
-A new policy was also added!
-
-Details are here - https://github.com/KyIT/KyGP/issues/3
-
-And thats that for 0.3! 
-
-For a reference of the Group Policies, please check out the readme.docx.
+For a reference of the Group Policies, please check out the readme.docx
 
 If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton) or via email at kyle.hulton@kyit.co.uk
