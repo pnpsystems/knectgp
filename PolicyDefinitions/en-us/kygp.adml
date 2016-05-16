@@ -54,7 +54,7 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
 <string id="C_Office16_d">Options configurable for Office 2013 Products</string>
 <string id="C_Office16_PowerPoint_d">Options configurable for PowerPoint 2016</string>
 <string id="C_Windows_d">Change settings across versions of Windows</string>
-<string id="C_SecurityAndMaintainance_d">Look here for settings in the Action Center for Windows Vista and 7 as well as the Security and Maintainance area on Windows 8 and 10</string>
+<string id="C_SecurityAndMaintenance_d">Look here for settings in the Action Center for Windows Vista and 7 as well as the Security and Maintainance area on Windows 8 and 10</string>
             
             <!-- Policy Definitions -->
             <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
@@ -84,40 +84,40 @@ Enabled: Enables Java AutoUpdater
 Disabled: Disables Java AutoUpdater</string>
 <string id="P_DisableTopology_d">This setting allows you to change the default for the check box "Automatically extend display when presenting on a laptop or tablet" located in "File > Options > Advanced - Under the category display".
 
-Not Configuring this Policy leaves PowerPoint to it's default, or allows the user to keep their personal preference.
+Not Configuring this Policy leaves PowerPoint to its default, or allows the user to keep their personal preference.
 
-Enabled: Clears the aforementiond check box
-    This inturn disables Presenter View's funtionality
-Disabled: Fills the aforementiond check box
-    This inturn maintains Presenter View's funtionality     
+Enabled: Clears the aforementioned check box
+    This in turn disables Presenter View's functionality
+Disabled: Fills the aforementioned check box
+    This in turn maintains Presenter View's functionality     
 
 This change happens on Logon. Once applied, setting this to Not configured will not set this to PowerPoints default. It simply stops applying anything during user logon.</string>
 <string id="P_DisableUseMonMgr_d">This setting allows you to change the default for Presenter View on Microsoft PowerPoint.
 
-Not Configuring this Policy leaves PowerPoint to it's default, or allows the user to keep their personal preference.
+Not Configuring this Policy leaves PowerPoint to its default, or allows the user to keep their personal preference.
 
 Enabled: Checks the box for Use Presenter View
 Disabled: Clears the box for Use Presenter View
-            
+
 This change happens on Logon. Once applied, setting this to Not configured will not set this to PowerPoints default. It simply stops applying anything during user logon.</string>
 <string id="P_OpenFileExplorerTo_d">Not configuring this object will not remove the policy. 
     It simply stops applying during user logon.
             
-Enabling this policy sets File Explorer to open to This PC by default, showing network drives and portable meda straight away rather than the Default Windows option of opening Quick Access. Disabling this policy however will apply the setting for Quick Access to be default.</string>
+Enabling this policy sets File Explorer to open to This PC by default, showing network drives and portable media straight away rather than the Default Windows option of opening Quick Access. Disabling this policy however will apply the setting for Quick Access to be default.</string>
 <string id="P_ShowColourExptTitleBar_d">Not configuring this object will not remove the policy.
     It simply stops applying during user logon.
 
-Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Windows Aero enabled area's, such as Start, Taskbar and the Notification and Action Center. It doesn't affect the Title Bars on Applications!
+Enabling this policy Enables the Colour specified in Settings > Personalisation > Colours, to be applied automagically to the Windows Aero enabled areas, such as Start, Taskbar and the Notification and Action Center. It doesn't affect the Title Bars on Applications!
 Disabling this policy however sets the Windows Aero areas back to Windows 10's default colour of Black.</string>
 <string id="P_ShowColourOnTitleBar_d">Not configuring this object will not remove the policy.
     It simply stops applying during user logon.
 
-Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
+Enabling this policy Enables the Colour specified in Settings > Personalisation > Colours, to be applied automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
 Disabling this policy however sets the Title Bars to Windows 10's default colour of White.</string>
 <string id="P_DisableWindowsBackupMonitoring_d">Not configuring this object will not remove the policy.
     It simply stops applying during user logon.
 
-Enabling this policy stops the Windows Backup monitoring that is part and parcel of the Action Center/Security and Maintainance options.
+Enabling this policy stops the Windows Backup monitoring that is part and parcel of the Action Center/Security and Maintenance options.
 
 However disabling this policy will enforce it to be on all the time, as long as this policy is set.</string>
 <string id="P_KidrexDefaultSearchEngine_d">Not configuring this object will not remove the policy.
@@ -131,6 +131,8 @@ Leaving this to not configured will allow other policies or methods to be used, 
             
             <!-- Place holders -->
             <string id="C_d">Placeholder!</string>
+            <string id="P_null">Null Policy</string>
+            <string id="P_null_d">This policy no longer works and should be set to not configured before it is removed in a later version.</string>
             <string id="P_d">Placeholder!</string>
             
             <!-- SupportedOn Definitions --><!-- Generic -->
