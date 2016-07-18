@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.4 -->
+<!-- Version: 0.5 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.4"
+    revision="0.5"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
     <policyNamespaces>
         <target prefix="KyGP" namespace="KyIT.KyGP" />
     </policyNamespaces>
     <supersededAdm fileName="kidrex.adm" />
-    <resources minRequiredRevision="0.4" />
+    <resources minRequiredRevision="0.5" />
         <supportedOn>
             <definitions>
                 <definition name="Su_win32" displayName="$(string.Su_win32)" />
@@ -166,6 +166,12 @@
                   explainText="$(string.C_Windows_10_Settings_Personalisation_Colours_d)" >
             <parentCategory ref="Windows_10_Settings_Personalisation" />
         </category>
+		<category name="Windows_Essentials"
+				  displayName="$(string.C_Windows_Essentials)"
+				  explainText="$(string.C_d)"
+				  >
+			<parentCategory ref="KyGP" />
+		</category>
     </categories>
     <policies>
         <policy name="AutoColorization"
@@ -384,5 +390,20 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+		<policy name="WE_SuppressEULA"
+				class="User"
+				displayName="$(string.P_SuppressEULA)"
+				explainText="$(string.P_d)"
+				key="SOFTWARE\Microsoft\Windows Live\Common"
+				valueName="TOUVersion" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KyGP:Su_Windows_Essentials" />
+			<enabledValue>
+				<string>16.0.0.0</string>
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
     </policies>
 </policyDefinitions>
