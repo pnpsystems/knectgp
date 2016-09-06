@@ -5,12 +5,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     revision="0.5"
     schemaVersion="1.0"
-    xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+    xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
     <policyNamespaces>
         <target prefix="KyGP" namespace="KyIT.KyGP" />
     </policyNamespaces>
     <supersededAdm fileName="kidrex.adm" />
-    <resources minRequiredRevision="0.5" />
+    <resources minRequiredRevision="0.5"
+			   fallbackCulture="en-gb" />
     <categories>
         <category name="KyGP" 
                   displayName="$(string.C_KyGP)"

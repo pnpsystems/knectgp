@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     revision="0.5"
     schemaVersion="1.0"
-    xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+    xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
 	<displayName>KyGP</displayName>
 	<description>KyGP - Group Policy Administrative Template Pack</description>
 	<resources>
