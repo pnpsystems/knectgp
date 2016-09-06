@@ -18,12 +18,12 @@
             <string id="C_Java">Java</string>
 			<string id="C_KyGP">KyGP</string>
             <string id="C_Office">Microsoft Office</string>
-            <string id="C_Office14">Office 2010</string>
-            <string id="C_Office15">Office 2013</string>
-            <string id="C_Office16">Office 2016</string>
-            <string id="C_Office14_PowerPoint">PowerPoint 2010</string>
-            <string id="C_Office15_PowerPoint">PowerPoint 2013</string>
-            <string id="C_Office16_PowerPoint">PowerPoint 2016</string>
+            <string id="C_O14">Office 2010</string>
+            <string id="C_O15">Office 2013</string>
+            <string id="C_O16">Office 2016</string>
+            <string id="C_O14_PP">PowerPoint 2010</string>
+            <string id="C_O15_PP">PowerPoint 2013</string>
+            <string id="C_O16_PP">PowerPoint 2016</string>
             <string id="C_Personalisation">Personalisation</string>
             <string id="C_SecurityAndMaintenance">Security and Maintenance</string>
             <string id="C_Settings">Settings</string>
@@ -40,7 +40,7 @@
 <string id="C_ExplorerOptions_d">Settings for how Windows/File Explorer work will appear here!</string>
 <string id="C_IE_d">Settings for Windows Internet Explorer</string>
 <string id="C_Java_d">Settings for Java Runtime Environment</string>
-<string id="C_KyGP_d">These policies were created for specific purposes, such as enabling via Group Policiy the user settings that exist on Windows that do not exist in the Vanilla Group Policy templates.
+<string id="D_KyGP">These policies were created for specific purposes, such as enabling via Group Policiy the user settings that exist on Windows that do not exist in the Vanilla Group Policy templates.
 
 Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk! or perform a Pull Request on GitHub at https://github.com/kyit/kygp</string>
 <string id="C_Settings_Personalisation_d">Control Personalisation Options from the Settings App!</string>
@@ -62,7 +62,7 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             <string id="P_ShowColourExptTitleBar">Enable Show Colour on Start, Taskbar and Action Center</string>
             <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>
 			<string id="P_SuppressEULA">Suppress the EULA</string>
-			<string id="P_WE_SkipSignIn">Skip Sign in to the Windows Live account in Photo Gallery</string>
+			<string id="P_WE_SkipSignIn">Suppress Sign in of Microsoft Account in Photo Gallery</string>
 			
             
             <!-- Policy Descriptions -->
@@ -124,21 +124,21 @@ Disabling this policy however sets the Title Bars to Windows 10's default colour
             <string id="Su_Java">Java Runtime Environment</string>
             
             <!-- Internet Explorer and Edge -->
-            <string id="Su_IE7">At least Internet Explorer 7</string>
-            <string id="Su_IE8">At least Internet Explorer 8</string>
-            <string id="Su_IE9">At least Internet Explorer 9</string>
-            <string id="Su_IE10">At least Internet Explorer 10</string>
-            <string id="Su_IE11">At least Internet Explorer 11</string>
+            <string id="Su_IE_7">At least Internet Explorer 7</string>
+            <string id="Su_IE_8">At least Internet Explorer 8</string>
+            <string id="Su_IE_9">At least Internet Explorer 9</string>
+            <string id="Su_IE_10">At least Internet Explorer 10</string>
+            <string id="Su_IE_11">At least Internet Explorer 11</string>
             <string id="Su_Edge">At least Microsoft Edge</string>
             
             <!-- Office -->
             <string id="Su_O13">At least Microsoft Office 2007</string>
             <string id="Su_O14">At least Microsoft Office 2010</string>
-            <string id="Su_O14_PowerPoint">At least Microsoft PowerPoint 2010</string>
+            <string id="Su_O14_PP">At least Microsoft PowerPoint 2010</string>
             <string id="Su_O15">At least Microsoft Office 2013</string>
-            <string id="Su_O15_PowerPoint">At least Microsoft PowerPoint 2013</string>
+            <string id="Su_O15_PP">At least Microsoft PowerPoint 2013</string>
             <string id="Su_O16">At least Microsoft Office 2016</string>
-            <string id="Su_O16_PowerPoint">At least Microsoft PowerPoint 2016</string>
+            <string id="Su_O16_PP">At least Microsoft PowerPoint 2016</string>
             
             <!-- Windows Clients --><!-- Windows Vista -->
             <string id="Su_WindowsVista">At least Windows Vista</string>
