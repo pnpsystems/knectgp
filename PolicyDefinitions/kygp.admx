@@ -18,12 +18,12 @@
         />
         <category name="IE"
                   displayName="$(string.C_IE)"
-                  explainText="$(string.C_IE_d)" >
+                  explainText="$(string.D_IE)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Java" 
                   displayName="$(string.C_Java)"
-                  explainText="$(string.C_Java_d)" >
+                  explainText="$(string.D_Java)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Office"
@@ -63,12 +63,12 @@
         </category>
         <category name="Windows"
                   displayName="$(string.C_Windows)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_Windows)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Windows_ControlPanel"
                   displayName="$(string.C_ControlPanel)"
-                  explainText="$(string.C_ControlPanel_d)" >
+                  explainText="$(string.D_ControlPanel)" >
             <parentCategory ref="Windows" />
         </category>
         <category name="Windows_ControlPanel_SecurityAndMaintenance"
@@ -78,37 +78,37 @@
         </category>
         <category name="Windows_10"
                   displayName="$(string.C_Windows_10)"
-                  explainText="$(string.C_Windows_10_d)" >
+                  explainText="$(string.D_Windows_10)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="Windows_10_ControlPanel"
                   displayName="$(string.C_ControlPanel)"
-                  explainText="$(string.C_ControlPanel_d)" >
+                  explainText="$(string.D_ControlPanel)" >
             <parentCategory ref="Windows_10" />
         </category>
         <category name="Windows_10_ControlPanel_FileExplorerOptions"
                   displayName="$(string.C_FileExplorerOptions)"
-                  explainText="$(string.C_ExplorerOptions_d)" >
+                  explainText="$(string.D_ExplorerOptions)" >
             <parentCategory ref="Windows_10_ControlPanel" />
         </category>
         <category name="Windows_10_Settings"
                   displayName="$(string.C_Settings)"
-                  explainText="$(string.C_Settings_Windows_10_Settings_d)" >
+                  explainText="$(string.D_Settings_Windows_10_Settings)" >
             <parentCategory ref="Windows_10" />
         </category>
         <category name="Windows_10_Settings_Personalisation"
                   displayName="$(string.C_Personalisation)"
-                  explainText="$(string.C_Settings_Personalisation_d)" >
+                  explainText="$(string.D_Settings_Personalisation)" >
             <parentCategory ref="Windows_10_Settings" />
         </category>
         <category name="Windows_10_Settings_Personalisation_Colours"
                   displayName="$(string.C_Colours)"
-                  explainText="$(string.C_Windows_10_Settings_Personalisation_Colours_d)" >
+                  explainText="$(string.D_Windows_10_Settings_Personalisation_Colours)" >
             <parentCategory ref="Windows_10_Settings_Personalisation" />
         </category>
 		<category name="Windows_Essentials"
 				  displayName="$(string.C_Windows_Essentials)"
-				  explainText="$(string.C_d)" >
+				  explainText="$(string.D_Windows_Essentials)" >
 			<parentCategory ref="KyGP" />
 		</category>
     </categories>
