@@ -73,7 +73,7 @@
         </supportedOn>
     <categories>
         <category name="KyGP" 
-                  displayName="$(string.C_KyGP)"
+                  displayName="KyGP:KyGP"
                   explainText="$(string.C_KyGP_d)"
         />
         <category name="IE"
@@ -400,6 +400,21 @@
 			<supportedOn ref="KyGP:Su_Windows_Essentials" />
 			<enabledValue>
 				<string>16.0.0.0</string>
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
+		<policy name="WE_SkipSignIn"
+				class="User"
+				displayName="$(string.P_WE_SkipSignIn)"
+				explainText="$(string.P_d)"
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery"
+				valueName="SignInRemindersLeft" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KyGP:Su_Windows_Essentials" />
+			<enabledValue>
+				<decimal value="0" />
 			</enabledValue>
 			<disabledValue>
 				<delete />
