@@ -28,37 +28,37 @@
         </category>
         <category name="Office"
                   displayName="$(string.C_Office)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_Office)" >
             <parentCategory ref="KyGP" />
         </category>
         <category name="O14"
                   displayName="$(string.C_O14)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O14)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O14_PP"
                   displayName="$(string.C_O14_PP)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O14_PP)" >
             <parentCategory ref="O14" />
         </category>
         <category name="O15"
                   displayName="$(string.C_O15)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O15)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O15_PP"
                   displayName="$(string.C_O15_PP)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O15_PP)" >
             <parentCategory ref="O15" />
         </category>
         <category name="O16"
                   displayName="$(string.C_O16)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O16)" >
             <parentCategory ref="Office" />
         </category>
         <category name="O16_PP"
                   displayName="$(string.C_O16_PP)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_O16_PP)" >
             <parentCategory ref="O16" />
         </category>
         <category name="Windows"
@@ -73,7 +73,7 @@
         </category>
         <category name="Windows_ControlPanel_SecurityAndMaintenance"
                   displayName="$(string.C_SecurityAndMaintenance)"
-                  explainText="$(string.C_d)" >
+                  explainText="$(string.D_SecurityAndMaintenance)" >
             <parentCategory ref="Windows_ControlPanel" />
         </category>
         <category name="Windows_10"
@@ -116,7 +116,7 @@
         <policy name="AutoColorization"
                 class="User"
                 displayName="$(string.P_AutoColorization)"
-                explainText="$(string.P_AutoColorization_d)"
+                explainText="$(string.D_AutoColorization)"
                 key="Control Panel\Desktop"
                 valueName="AutoColorization" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
@@ -131,7 +131,7 @@
         <policy name="ShowColourExptTitleBar"
                 class="User"
                 displayName="$(string.P_ShowColourExptTitleBar)"
-                explainText="$(string.P_ShowColourExptTitleBar_d)"
+                explainText="$(string.D_ShowColourExptTitleBar)"
                 key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"
                 valueName="ColorPrevalence" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
@@ -146,7 +146,7 @@
         <policy name="ShowColourOnTitleBar"
                 class="User"
                 displayName="$(string.P_ShowColourOnTitleBar)"
-                explainText="$(string.P_ShowColourOnTitleBar_d)"
+                explainText="$(string.D_ShowColourOnTitleBar)"
                 key="Software\Microsoft\Windows\DWM"
                 valueName="ColorPrevalence" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
@@ -161,7 +161,7 @@
         <policy name="DisableJavaAutoUpdate"
                 class="Machine"
                 displayName="$(string.P_DisableJavaAutoUpdate)"
-                explainText="$(string.P_DisableJavaAutoUpdate_d)"
+                explainText="$(string.D_DisableJavaAutoUpdate)"
                 key="SOFTWARE\JavaSoft\Java Update\Policy" >
             <parentCategory ref="Java" />
             <supportedOn ref="KyGP:Su_Java" />
@@ -197,7 +197,7 @@
         <policy name="OpenFileExplorerTo"
                 class="User"
                 displayName="$(string.P_OpenFileExplorerTo)"
-                explainText="$(string.P_OpenFileExplorerTo_d)"
+                explainText="$(string.D_OpenFileExplorerTo)"
                 key="SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
                 valueName="LaunchTo" >
             <parentCategory ref="Windows_10_ControlPanel_FileExplorerOptions" />
@@ -212,7 +212,7 @@
         <policy name="DisableWindowsBackupMonitoring"
                 class="Machine"
                 displayName="$(string.P_DisableWindowsBackupMonitoring)"
-                
+                explainText="$(string.D_DisableWindowsBackupMonitoring)"
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
@@ -227,7 +227,7 @@
         <policy name="KidrexDefaultSearchEngine"
                 class="User"
                 displayName="$(string.P_KidrexDefaultSearchEngine)"
-                
+                explainText="$(string.D_KidrexDefaultSearchEngine)"
                 key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
             <parentCategory ref="IE" />
             <supportedOn ref="KyGP:Su_IE_7" />
@@ -287,7 +287,7 @@
         <policy name="O16_DisableTopology"
                 class="User"
                 displayName="$(string.P_DisableTopology)"
-                explainText="$(string.P_DisableTopology_d)"
+                explainText="$(string.D_DisableTopology)"
                 key="SOFTWARE\Microsoft\Office\16.0\PowerPoint\Options"
                 valueName="DisableSetTopology" >
             <parentCategory ref="O16_PP" />
@@ -302,7 +302,7 @@
         <policy name="O15_DisableUseMonMgr"
                 class="User"
                 displayName="$(string.P_DisableUseMonMgr)"
-                explainText="$(string.P_DisableUseMonMgr_d)"
+                explainText="$(string.D_DisableUseMonMgr)"
                 key="SOFTWARE\Microsoft\Office\15.0\PowerPoint\Options"
                 valueName="UseMonMgr" >
             <parentCategory ref="O15_PP" />
@@ -317,7 +317,7 @@
         <policy name="O14_DisableUseMonMgr"
                 class="User"
                 displayName="$(string.P_DisableUseMonMgr)"
-                explainText="$(string.P_DisableUseMonMgr_d)"
+                explainText="$(string.D_DisableUseMonMgr)"
                 key="SOFTWARE\Microsoft\Office\14.0\PowerPoint\Options"
                 valueName="UseMonMgr" >
             <parentCategory ref="O14_PP" />

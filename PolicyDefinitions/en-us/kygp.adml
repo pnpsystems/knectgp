@@ -47,6 +47,15 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
 <string id="C_Settings_Windows_10_Settings_d">Controls for Options that live in the Settings App on Windows 10!</string>
 <string id="C_Windows_10_d">Controls for Windows 10</string>
 <string id="C_Windows_10_Settings_Personalisation_Colours_d">Control the options for the settings located in Colours, in Personalisation on the Settings App on Windows 10!</string>
+<string id="D_Office">Options configurable for Microsoft Office Products</string>
+<string id="D_O14">Options configurable for Office 2010 Products</string>
+<string id="D_O14_PP">Options configurable for PowerPoint 2010</string>
+<string id="D_O15">Options configurable for Office 2013 Products</string>
+<string id="D_O15_PP">Options configurable for PowerPoint 2013</string>
+<string id="D_O16">Options configurable for Office 2013 Products</string>
+<string id="D_O16_PP">Options configurable for PowerPoint 2016</string>
+<string id="D_Windows">Change settings across versions of Windows</string>
+<string id="D_SecurityAndMaintenance">Look here for settings in the Action Center for Windows Vista and 7 as well as the Security and Maintainance area on Windows 8 and 10</string>
             
             <!-- Policy Definitions -->
             <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
@@ -67,48 +76,56 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             
             <!-- Policy Descriptions -->
             <!-- Tabs inside the <string> show in Group Policy Management Editor, this is why the <strings>'s are untabbed! -->
-<string id="P_AutoColorization_d">Not configuring this object will not remove the policy. 
+<string id="D_AutoColorization">Not configuring this object will not remove the policy. 
     It simply stops applying during user logon.
 
 Enabled: This puts the switch in the on position.
 Disabled: This puts the switch in the off position. (Default for Windows 10)</string>
-<string id="P_DisableJavaAutoUpdate_d">This setting disables the call for Java AutoUpdater.
+<string id="D_DisableJavaAutoUpdate">This setting disables the call for Java AutoUpdater.
 Not Configuring this policy stops enforcing the change. To reverse it you must disable this policy or reinstall Java.
                 
 Enabled: Enables Java AutoUpdater                
 Disabled: Disables Java AutoUpdater</string>
-<string id="P_DisableTopology_d">This setting allows you to change the default for the check box "Automatically extend display when presenting on a laptop or tablet" located in "File > Options > Advanced - Under the category display".
+<string id="D_DisableTopology">This setting allows you to change the default for the check box "Automatically extend display when presenting on a laptop or tablet" located in "File > Options > Advanced - Under the category display".
 
-Not Configuring this Policy leaves PowerPoint to it's default, or allows the user to keep their personal preference.
+Not Configuring this Policy leaves PowerPoint to its default, or allows the user to keep their personal preference.
 
-Enabled: Clears the aforementiond check box
-    This inturn disables Presenter View's funtionality
-Disabled: Fills the aforementiond check box
-    This inturn maintains Presenter View's funtionality     
+Enabled: Clears the aforementioned check box
+    This in turn disables Presenter View's functionality
+Disabled: Fills the aforementioned check box
+    This in turn maintains Presenter View's functionality     
 
 This change happens on Logon. Once applied, setting this to Not configured will not set this to PowerPoints default. It simply stops applying anything during user logon.</string>
-<string id="P_DisableUseMonMgr_d">This setting allows you to change the default for Presenter View on Microsoft PowerPoint.
+<string id="D_DisableUseMonMgr">This setting allows you to change the default for Presenter View on Microsoft PowerPoint.
 
-Not Configuring this Policy leaves PowerPoint to it's default, or allows the user to keep their personal preference.
+Not Configuring this Policy leaves PowerPoint to its default, or allows the user to keep their personal preference.
 
 Enabled: Checks the box for Use Presenter View
 Disabled: Clears the box for Use Presenter View
-            
+
 This change happens on Logon. Once applied, setting this to Not configured will not set this to PowerPoints default. It simply stops applying anything during user logon.</string>
-<string id="P_OpenFileExplorerTo_d">Not configuring this object will not remove the policy. 
+<string id="D_OpenFileExplorerTo">Not configuring this object will not remove the policy. 
     It simply stops applying during user logon.
             
-Enabling this policy sets File Explorer to open to This PC by default, showing network drives and portable meda straight away rather than the Default Windows option of opening Quick Access. Disabling this policy however will apply the setting for Quick Access to be default.</string>
-<string id="P_ShowColourExptTitleBar_d">Not configuring this object will not remove the policy.
+Enabling this policy sets File Explorer to open to This PC by default, showing network drives and portable media straight away rather than the Default Windows option of opening Quick Access. Disabling this policy however will apply the setting for Quick Access to be default.</string>
+<string id="D_ShowColourExptTitleBar">Not configuring this object will not remove the policy.
     It simply stops applying during user logon.
 
-Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Windows Aero enabled area's, such as Start, Taskbar and the Notification and Action Center. It doesn't affect the Title Bars on Applications!
+Enabling this policy Enables the Colour specified in Settings > Personalisation > Colours, to be applied automagically to the Windows Aero enabled areas, such as Start, Taskbar and the Notification and Action Center. It doesn't affect the Title Bars on Applications!
 Disabling this policy however sets the Windows Aero areas back to Windows 10's default colour of Black.</string>
-<string id="P_ShowColourOnTitleBar_d">Not configuring this object will not remove the policy.
+<string id="D_ShowColourOnTitleBar">Not configuring this object will not remove the policy.
     It simply stops applying during user logon.
 
-Enabling this policy Enables the Colour specifed in Settings > Personalisation > Colours, to be applied  automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
+Enabling this policy Enables the Colour specified in Settings > Personalisation > Colours, to be applied automagically to the Title Bars of Windowed applications and Store Apps. This does not affect applications that use their own Title Bars and it also doesn't have any bearing on Aero Enabled applications.
 Disabling this policy however sets the Title Bars to Windows 10's default colour of White.</string>
+<string id="D_KidrexDefaultSearchEngine">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+
+When this policy is enabled, it inserts into the Group Policy Search Scopes for Internet Explorer the required values for the Kidrex search engine to function from the address bar and/or search bar. It then enables the option that restricts Internet Explorer to using only those search engines listed in Group Policy. It then also sets Kidrex to be the default search engine.
+
+Disabling this policy will stop enforcing the Group Policy Search Scopes to be used and will set Bing! to be default.
+    
+Leaving this to not configured will allow other policies or methods to be used, such as IEAK.</string>
             
             <!-- Place holders -->
             <string id="C_d">Placeholder!</string>
