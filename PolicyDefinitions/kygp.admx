@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5 d4 -->
+<!-- Version: 0.5e -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -359,6 +359,19 @@
 			<disabledValue>
 				<delete />
 			</disabledValue>
+		</policy>
+		<policy name="WE_DontShowAssociationsDialogExtensions"
+				class="User"
+				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
+				
+				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library"
+				valueName="DontShowAssociationsDialogExtensions" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KyGP:Su_Windows_Essentials" />
+			<elements>
+				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10"
+			</elements>
 		</policy>
     </policies>
 </policyDefinitions>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5 d4 -->
+<!-- Version: 0.5e -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -229,5 +229,25 @@ Leaving this to not configured will allow other policies or methods to be used, 
             
         <!-- End of SU -->
         </stringTable>
+		<presentationTable>
+			<presentation id="P_WE_DontShowAssociationsDialogExtensions">
+<multiTextBox refId="M_WE_DontShowAssociationsDialogExtensions">Please specifiy the file extensions you don't wish Photo Gallery to change defaults for, for best results copy and paste the below example.
+
+e.g.
+.WDP
+.BMP
+.JFIF
+.JPEG
+.JPE
+.JPG
+.PNG
+.TIF
+.DIB
+.TIFF
+.ICO
+	
+</multiTextBox>
+			</presentation>
+		</presentationTable>
   	</resources>
 </policyDefinitionResources>
