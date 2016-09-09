@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5e -->
+<!-- Version: 0.5f -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -73,6 +73,7 @@ Any additions you want to add? Get in touch via email at kyle.hulton@kyit.co.uk!
             <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>
 			<string id="P_SuppressEULA">Suppress the EULA</string>
 			<string id="P_WE_SkipSignIn">Suppress Sign in of Microsoft Account in Photo Gallery</string>
+			<string id="P_WE_DontShowAssociationsDialogExtensions">Prevent Photo Gallery from asking to changing file associations</string>
 			
             
             <!-- Policy Descriptions -->
@@ -127,113 +128,18 @@ When this policy is enabled, it inserts into the Group Policy Search Scopes for 
 Disabling this policy will stop enforcing the Group Policy Search Scopes to be used and will set Bing! to be default.
     
 Leaving this to not configured will allow other policies or methods to be used, such as IEAK.</string>
-            
-            <!-- Place holders -->
-            <string id="C_d">Placeholder!</string>
-            <string id="P_d">Placeholder!</string>
-            
-            <!-- SupportedOn Definitions --><!-- Generic -->
-			<string id="Su_win32">32 bit Application</string>
-			<string id="Su_amd64">64 bit Application</string>
-			
-			<string id="Su_Windows_Essentials">Windows Essentials 2012</string>
-            
-            <!-- Java -->
-            <string id="Su_Java">Java Runtime Environment</string>
-            
-            <!-- Internet Explorer and Edge -->
-            <string id="Su_IE_7">At least Internet Explorer 7</string>
-            <string id="Su_IE_8">At least Internet Explorer 8</string>
-            <string id="Su_IE_9">At least Internet Explorer 9</string>
-            <string id="Su_IE_10">At least Internet Explorer 10</string>
-            <string id="Su_IE_11">At least Internet Explorer 11</string>
-            <string id="Su_Edge">At least Microsoft Edge</string>
-            
-            <!-- Office -->
-            <string id="Su_O13">At least Microsoft Office 2007</string>
-            <string id="Su_O14">At least Microsoft Office 2010</string>
-            <string id="Su_O14_PP">At least Microsoft PowerPoint 2010</string>
-            <string id="Su_O15">At least Microsoft Office 2013</string>
-            <string id="Su_O15_PP">At least Microsoft PowerPoint 2013</string>
-            <string id="Su_O16">At least Microsoft Office 2016</string>
-            <string id="Su_O16_PP">At least Microsoft PowerPoint 2016</string>
-            
-            <!-- Windows Clients --><!-- Windows Vista -->
-            <string id="Su_WindowsVista">At least Windows Vista</string>
-            <string id="Su_WindowsVista_SP1">At least Windows Vista with Service Pack 1</string>
-            <string id="Su_WindowsVista_SP2">At least Windows Vista with Service Pack 2</string>
-            <!-- Windows 7 -->
-            <string id="Su_Windows7">At least Windows 7</string>
-            <string id="Su_Windows7_SP1">At least Windows 7 Service Pack 1</string>
-            <!-- Windows 8 -->
-            <string id="Su_Windows8">At least Windows 8</string>
-            <!-- Windows 8.1 -->
-            <string id="Su_Windows8_1">At least Windows 8.1</string>
-            <string id="Su_Windows8_1u">At least Windows 8.1 Update</string>
-            <!-- Windows 10 Threshold 1 -->
-            <string id="Su_Windows10_RTM">At least Windows 10 RTM</string>
-            <string id="Su_Windows10_TH1">At least Windows 10 Threshold 1</string>
-            <string id="Su_Windows10_10240">At least Windows 10 Jul'15 (10.0.10240)</string>
-            <string id="Su_Windows10_1507">At least Windows 10 Jul'15 (10.0.10240)</string>
-            <!-- Windows 10 Threshold 2 -->
-            <string id="Su_Windows10_TH2">At least Windows 10 Threshold 2</string>
-            <string id="Su_Windows10_10586">At least Windows 10 (10.0.10586)</string>
-            <string id="Su_Windows10_1511">At least Windows 10 Nov'15 (10.0.10586)</string>
-            <string id="Su_Windows10">At least Windows 10 Nov'15 (10.0.10586)</string>
-            <!-- Windows 10 Redstone 1 -->
-            <string id="Su_Windows10_14393">At least Windows 10 Jul'16 (10.0.14393)</string>
-            <string id="Su_Windows10_RS1">At least Windows 10 Anniversary Update</string>
-            <string id="Su_Windows10_1607">At least Windows 10 Anniversary Update</string>
-            
-            <!-- Windows Servers --><!-- Windows Server 2008 -->
-            <string id="Su_WindowsSrv2k8">At least Windows Server 2008</string>
-            <string id="Su_WindowsSrv2k8_SP1">At least Windows Server 2008 With Service Pack 1</string>
-            <string id="Su_WindowsSrv2k8_SP2">At least Windows Server 2008 With Service Pack 2</string>
-            <!-- Windows Server 2008 R2 -->
-            <string id="Su_WindowsSrv2k8R2">At least Windows Server 2008 R2</string>
-            <string id="Su_WindowsSrv2k8R2_SP1">At least Windows Server 2008 R2 With Service Pack 1</string>
-            <!-- Windows Server 2012 -->
-            <string id="Su_WindowsSrv2012">At least Windows Server 2012</string>
-            <!-- Windows Server 2012 R2 -->
-            <string id="Su_WindowsSrv2012R2">At least Windows Server 2012 R2</string>
-            <string id="Su_WindowsSrv2012R2u">At least Windows Server 2012 R2 Update</string>
-            <!-- Windows Server 2016 -->
-            <string id="Su_WindowsSrv2016_TP">At least Windows Server 2016 Technical Preview (6.4.9841)</string>
-            <string id="Su_WindowsSrv2016_TP2">At least Windows Server 2016 Technical Preview 2 (10.0.10074)</string>
-            <string id="Su_WindowsSrv2016_TP3">At least Windows Server 2016 Technical Preview 3 (10.0.10514)</string>
-            <string id="Su_WindowsSrv2016_TP4">At least Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
-            <string id="Su_WindowsSrv2016_TP5">At least Windows Server 2016 Technical Preview 5 (10.0.14300)</string>
-            <string id="Su_WindowsSrv2016">At least Windows Server 2016</string>
-            
-            <!-- Windows Clients and Servers (Shared) -->
-            <!-- Windows Vista and Server 2008 -->
-            <string id="Su_Windows_6000">At least Windows Vista or Windows Server 2008</string>
-            <string id="Su_Windows_6001">At least Windows Vista Service Pack 1 or Windows Server 2008 Service Pack 1</string>
-            <string id="Su_Windows_6002">At least Windows Vista Service Pack 2 or Windows Server 2008 Service Pack 2</string>
-            <!-- Windows 7 and Server 2008 R2 -->
-            <string id="Su_Windows_7600">At least Windows 7 or Windows Server 2008 R2</string>
-            <string id="Su_Windows_7601">At least Windows 7 Service Pack 1 or Windows Server 2008 R2 Service Pack 1</string>
-            <!-- Windows 8 and Server 2012 -->
-            <string id="Su_Windows_9200">At least Windows 8 or Windows Server 2012</string>
-            <!-- Windows 8.1 and Server 2012 R2 -->
-            <string id="Su_Windows_9600">At least Windows 8.1 or Windows Server 2012 R2</string>
-            <string id="Su_Windows_9600u">At least Windows 8.1 Update or Windows Server 2012 R2 Update 1</string>
-            <!-- Windows 10 and Server 2016 -->
-            <string id="Su_Windows_9841">At least Windows 10 or Windows Server 2016 Technical Preview (6.4.9841)</string>
-            <string id="Su_Windows_10074">At least Windows 10 or Windows Server 2016 Technical Preview 2 (10.0.10074)</string>
-            <string id="Su_Windows_10586">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
-            <string id="Su_Windows_TH2">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
-            <string id="Su_Windows_1511">At least Windows 10 or Windows Server 2016 Technical Preview 4 (10.0.10586)</string>
-            <string id="Su_Windows_RS1">At least Windows 10 Anniversary Update or Windows Server 2016 Technical Preview 5 (10.0.14300)</string>
-			<string id="Su_Windows_1607">At least Windows 10 Anniversary Update or Windows Server 2016 Technical Preview 5 (10.0.14300)</string>
-            
-        <!-- End of SU -->
-        </stringTable>
-		<presentationTable>
-			<presentation id="P_WE_DontShowAssociationsDialogExtensions">
-<multiTextBox refId="M_WE_DontShowAssociationsDialogExtensions">Please specifiy the file extensions you don't wish Photo Gallery to change defaults for, for best results copy and paste the below example.
+<string id="D_DisableWindowsBackupMonitoring">
+			explainText</string>
+<string id="D_WE_DontShowAssociationsDialogExtensions">Not configuring this object will not remove the policy.
+    It simply stops applying during user logon.
+	
+	When this policy is enabled, it will enter the extensions specified into an blacklist so that Photo Gallery will ignore trying to change the default application for them.
+	
+	Disabling this policy will delete said list. This may adversely effect clients that have already chosen defaults through Photo Gallery and will cause the prompts to show again.
+	
+	For best results copy and paste the below example:
+	To select the list easily, double-click the first entry and then whilst holding shift double-click the last entry. You can then copy and paste normally.
 
-e.g.
 .WDP
 .BMP
 .JFIF
@@ -244,9 +150,16 @@ e.g.
 .TIF
 .DIB
 .TIFF
-.ICO
-	
-</multiTextBox>
+.ICO</string>
+            
+            <!-- Place holders -->
+            <string id="C_d">Placeholder!</string>
+            <string id="P_d">Placeholder!</string>
+			
+        </stringTable>
+		<presentationTable>
+			<presentation id="P_WE_DontShowAssociationsDialogExtensions">
+<multiTextBox refId="M_WE_DontShowAssociationsDialogExtensions">Please specifiy the file extensions you don't wish Photo Gallery to change defaults below:</multiTextBox>
 			</presentation>
 		</presentationTable>
   	</resources>

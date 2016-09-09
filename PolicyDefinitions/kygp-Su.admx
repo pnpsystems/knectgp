@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version: 0.5f -->
+<policyDefinitions
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    revision="0.5"
+    schemaVersion="1.0"
+    xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
+    <policyNamespaces>
+        <target prefix="KyGP" namespace="KyIT.KyGP.SupportedOnDefinitions" />
+    </policyNamespaces>
+	<resources minRequiredRevision="0.5"
+			   fallbackCulture="en-gb" />
+	<supportedOn>
+		<definitions>
+			<definition name="Su_win32" displayName="$(string.Su_win32)" />
+			<definition name="Su_amd64" displayName="$(string.Su_amd64)" />
+			<definition name="Su_Java" displayName="$(string.Su_Java)" />
+			<definition name="Su_IE_7" displayName="$(string.Su_IE_7)" />
+			<definition name="Su_IE_8" displayName="$(string.Su_IE_8)" />
+			<definition name="Su_IE_9" displayName="$(string.Su_IE_9)" />
+			<definition name="Su_IE_10" displayName="$(string.Su_IE_10)" />
+			<definition name="Su_IE_11" displayName="$(string.Su_IE_11)" />
+			<definition name="Su_Edge" displayName="$(string.Su_Edge)" />
+			<definition name="Su_O13" displayName="$(string.Su_O13)" />
+			<definition name="Su_O14" displayName="$(string.Su_O14)" />
+			<definition name="Su_O14_PP" displayName="$(string.Su_O14_PP)" />
+			<definition name="Su_O15" displayName="$(string.Su_O15)" />
+			<definition name="Su_O15_PP" displayName="$(string.Su_O15_PP)" />
+			<definition name="Su_O16" displayName="$(string.Su_O16)" />
+			<definition name="Su_O16_PP" displayName="$(string.Su_O16_PP)" />
+			<definition name="Su_Windows_Essentials" displayName="$(string.Su_Windows_Essentials)" />
+		
+			<definition name="Su_WindowsVista" displayName="$(string.Su_WindowsVista)" />
+			<definition name="Su_WindowsVista_SP1" displayName="$(string.Su_WindowsVista_SP1)" />
+			<definition name="Su_WindowsVista_SP2" displayName="$(string.Su_WindowsVista_SP2)" />
+			<definition name="Su_Windows7" displayName="$(string.Su_Windows7)" />
+			<definition name="Su_Windows7_SP1" displayName="$(string.Su_Windows7_SP1)" />
+			<definition name="Su_Windows8" displayName="$(string.Su_Windows8)" />
+			<definition name="Su_Windows8_1" displayName="$(string.Su_Windows8_1)" />
+			<definition name="Su_Windows8_1u" displayName="$(string.Su_Windows8_1u)" />
+			<definition name="Su_Windows10_RTM" displayName="$(string.Su_Windows10_RTM)" />
+			<definition name="Su_Windows10_TH1" displayName="$(string.Su_Windows10_TH1)" />
+			<definition name="Su_Windows10_10240" displayName="$(string.Su_Windows10_10240)" />
+			<definition name="Su_Windows10_1507" displayName="$(string.Su_Windows10_1507)" />
+			<definition name="Su_Windows10_TH2" displayName="$(string.Su_Windows10_TH2)" />
+			<definition name="Su_Windows10_10586" displayName="$(string.Su_Windows10_10586)" />
+			<definition name="Su_Windows10_1511" displayName="$(string.Su_Windows10_1511)" />
+			<definition name="Su_Windows10" displayName="$(string.Su_Windows10)" />
+			<definition name="Su_Windows10_RS1" displayName="$(string.Su_Windows10_RS1)" />
+			<definition name="Su_WindowsSrv2k8" displayName="$(string.Su_WindowsSrv2k8)" />
+			<definition name="Su_WindowsSrv2k8_SP1" displayName="$(string.Su_WindowsSrv2k8_SP1)" />
+			<definition name="Su_WindowsSrv2k8_SP2" displayName="$(string.Su_WindowsSrv2k8_SP2)" />
+			<definition name="Su_WindowsSrv2k8R2" displayName="$(string.Su_WindowsSrv2k8R2)" />
+			<definition name="Su_WindowsSrv2k8R2_SP1" displayName="$(string.Su_WindowsSrv2k8R2_SP1)" />
+			<definition name="Su_WindowsSrv2012" displayName="$(string.Su_WindowsSrv2012)" />
+			<definition name="Su_WindowsSrv2012R2" displayName="$(string.Su_WindowsSrv2012R2)" />
+			<definition name="Su_WindowsSrv2012R2u" displayName="$(string.Su_WindowsSrv2012R2u)" />
+			<definition name="Su_WindowsSrv2016" displayName="$(string.Su_WindowsSrv2016)" />
+			<definition name="Su_Windows_6000" displayName="$(string.Su_Windows_6000)" />
+			<definition name="Su_Windows_6001" displayName="$(string.Su_Windows_6001)" />
+			<definition name="Su_Windows_6002" displayName="$(string.Su_Windows_6002)" />
+			<definition name="Su_Windows_7600" displayName="$(string.Su_Windows_7600)" />
+			<definition name="Su_Windows_7601" displayName="$(string.Su_Windows_7601)" />
+			<definition name="Su_Windows_9200" displayName="$(string.Su_Windows_9200)" />
+			<definition name="Su_Windows_9600" displayName="$(string.Su_Windows_9600)" />
+			<definition name="Su_Windows_9600u" displayName="$(string.Su_Windows_9600u)" />
+			<definition name="Su_Windows_9841" displayName="$(string.Su_Windows_9841)" />
+			<definition name="Su_Windows_10074" displayName="$(string.Su_Windows_10074)" />
+			<definition name="Su_Windows_10586" displayName="$(string.Su_Windows_10586)" />
+			<definition name="Su_Windows_TH2" displayName="$(string.Su_Windows_TH2)" />
+			<definition name="Su_Windows_1511" displayName="$(string.Su_Windows_1511)" />
+			<definition name="Su_Windows_RS1" displayName="$(string.Su_Windows_RS1)" />
+			<definition name="Su_Windows_1607" displayName="$(string.Su_Windows_1607)" />
+		</definitions>
+	</supportedOn>
+</policyDefinitions>
