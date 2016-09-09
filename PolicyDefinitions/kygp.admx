@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5e -->
+<!-- Version: 0.5f -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +7,8 @@
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
     <policyNamespaces>
-        <target prefix="KyGP" namespace="KyIT.KyGP" />
+        <target prefix="KyIT" namespace="KyIT.KyGP.Main" />
+		<using prefix="KyGP" namespace="KyIT.KyGP.SupportedOnDefinitions" />
     </policyNamespaces>
     <supersededAdm fileName="kidrex.adm" />
     <resources minRequiredRevision="0.5"
@@ -363,14 +364,14 @@
 		<policy name="WE_DontShowAssociationsDialogExtensions"
 				class="User"
 				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
-				
+				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
 				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
 				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library"
 				valueName="DontShowAssociationsDialogExtensions" >
 			<parentCategory ref="Windows_Essentials" />
 			<supportedOn ref="KyGP:Su_Windows_Essentials" />
 			<elements>
-				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10"
+				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
 			</elements>
 		</policy>
     </policies>
