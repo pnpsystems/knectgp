@@ -1,95 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.4 -->
+<!-- Version: 0.5.0 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.4"
+    revision="0.5"
     schemaVersion="1.0"
-    xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+    xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
     <policyNamespaces>
-        <target prefix="KyGP" namespace="KyIT.KyGP" />
+        <target prefix="KnectGP" namespace="KnectGP.Main" />
+		<using prefix="KnectGP_SU" namespace="KnectGP.SupportedOnDefinitions" />
     </policyNamespaces>
     <supersededAdm fileName="kidrex.adm" />
-    <resources minRequiredRevision="0.4" />
-        <supportedOn>
-            <definitions>
-                <definition name="Su_win32" displayName="$(string.Su_win32)" />
-                <definition name="Su_amd64" displayName="$(string.Su_amd64)" />
-                <definition name="Su_Java" displayName="$(string.Su_Java)" />
-                <definition name="Su_IE7" displayName="$(string.Su_IE7)" />
-                <definition name="Su_IE8" displayName="$(string.Su_IE8)" />
-                <definition name="Su_IE9" displayName="$(string.Su_IE9)" />
-                <definition name="Su_IE10" displayName="$(string.Su_IE10)" />
-                <definition name="Su_IE11" displayName="$(string.Su_IE11)" />
-                <definition name="Su_Edge" displayName="$(string.Su_Edge)" />
-                <definition name="Su_O13" displayName="$(string.Su_O13)" />
-                <definition name="Su_O14" displayName="$(string.Su_O14)" />
-                <definition name="Su_O14_PowerPoint" displayName="$(string.Su_O14_PowerPoint)" />
-                <definition name="Su_O15" displayName="$(string.Su_O15)" />
-                <definition name="Su_O15_PowerPoint" displayName="$(string.Su_O15_PowerPoint)" />
-                <definition name="Su_O16" displayName="$(string.Su_O16)" />
-                <definition name="Su_O16_PowerPoint" displayName="$(string.Su_O16_PowerPoint)" />
-                <definition name="Su_WindowsVista" displayName="$(string.Su_WindowsVista)" />
-                <definition name="Su_WindowsVista_SP1" displayName="$(string.Su_WindowsVista_SP1)" />
-                <definition name="Su_WindowsVista_SP2" displayName="$(string.Su_WindowsVista_SP2)" />
-                <definition name="Su_Windows7" displayName="$(string.Su_Windows7)" />
-                <definition name="Su_Windows7_SP1" displayName="$(string.Su_Windows7_SP1)" />
-                <definition name="Su_Windows8" displayName="$(string.Su_Windows8)" />
-                <definition name="Su_Windows8_1" displayName="$(string.Su_Windows8_1)" />
-                <definition name="Su_Windows8_1u" displayName="$(string.Su_Windows8_1u)" />
-                <definition name="Su_Windows10_RTM" displayName="$(string.Su_Windows10_RTM)" />
-                <definition name="Su_Windows10_TH1" displayName="$(string.Su_Windows10_TH1)" />
-                <definition name="Su_Windows10_10240" displayName="$(string.Su_Windows10_10240)" />
-                <definition name="Su_Windows10_1507" displayName="$(string.Su_Windows10_1507)" />
-                <definition name="Su_Windows10_TH2" displayName="$(string.Su_Windows10_TH2)" />
-                <definition name="Su_Windows10_10586" displayName="$(string.Su_Windows10_10586)" />
-                <definition name="Su_Windows10_1511" displayName="$(string.Su_Windows10_1511)" />
-                <definition name="Su_Windows10" displayName="$(string.Su_Windows10)" />
-                <definition name="Su_Windows10_RS1" displayName="$(string.Su_Windows10_RS1)" />
-                <definition name="Su_WindowsSrv2k8" displayName="$(string.Su_WindowsSrv2k8)" />
-                <definition name="Su_WindowsSrv2k8_SP1" displayName="$(string.Su_WindowsSrv2k8_SP1)" />
-                <definition name="Su_WindowsSrv2k8_SP2" displayName="$(string.Su_WindowsSrv2k8_SP2)" />
-                <definition name="Su_WindowsSrv2k8R2" displayName="$(string.Su_WindowsSrv2k8R2)" />
-                <definition name="Su_WindowsSrv2k8R2_SP1" displayName="$(string.Su_WindowsSrv2k8R2_SP1)" />
-                <definition name="Su_WindowsSrv2012" displayName="$(string.Su_WindowsSrv2012)" />
-                <definition name="Su_WindowsSrv2012R2" displayName="$(string.Su_WindowsSrv2012R2)" />
-                <definition name="Su_WindowsSrv2012R2u" displayName="$(string.Su_WindowsSrv2012R2u)" />
-                <definition name="Su_WindowsSrv2016" displayName="$(string.Su_WindowsSrv2016)" />
-                <definition name="Su_Windows_6000" displayName="$(string.Su_Windows_6000)" />
-                <definition name="Su_Windows_6001" displayName="$(string.Su_Windows_6001)" />
-                <definition name="Su_Windows_6002" displayName="$(string.Su_Windows_6002)" />
-                <definition name="Su_Windows_7600" displayName="$(string.Su_Windows_7600)" />
-                <definition name="Su_Windows_7601" displayName="$(string.Su_Windows_7601)" />
-                <definition name="Su_Windows_9200" displayName="$(string.Su_Windows_9200)" />
-                <definition name="Su_Windows_9600" displayName="$(string.Su_Windows_9600)" />
-                <definition name="Su_Windows_9600u" displayName="$(string.Su_Windows_9600u)" />
-                <definition name="Su_Windows_9841" displayName="$(string.Su_Windows_9841)" />
-                <definition name="Su_Windows_10074" displayName="$(string.Su_Windows_10074)" />
-                <definition name="Su_Windows_10586" displayName="$(string.Su_Windows_10586)" />
-                <definition name="Su_Windows_TH2" displayName="$(string.Su_Windows_TH2)" />
-                <definition name="Su_Windows_1511" displayName="$(string.Su_Windows_1511)" />
-                <definition name="Su_Windows_RS1" displayName="$(string.Su_Windows_RS1)" />
-            </definitions>
-        </supportedOn>
+    <resources minRequiredRevision="0.5"
+			   fallbackCulture="en-gb" />
     <categories>
-        <category name="KyGP" 
-                  displayName="$(string.C_KyGP)"
-                  explainText="$(string.C_KyGP_d)"
+        <category name="KnectGP" 
+                  displayName="$(string.C_KnectGP)"
+                  explainText="$(string.D_KnectGP)"
         />
         <category name="IE"
                   displayName="$(string.C_IE)"
-                  explainText="$(string.C_IE_d)" >
-            <parentCategory ref="KyGP" />
+                  explainText="$(string.D_IE)" >
+            <parentCategory ref="KnectGP" />
         </category>
         <category name="Java" 
                   displayName="$(string.C_Java)"
-                  explainText="$(string.C_Java_d)" >
-            <parentCategory ref="KyGP" />
+                  explainText="$(string.D_Java)" >
+            <parentCategory ref="KnectGP" />
         </category>
         <category name="Office"
                   displayName="$(string.C_Office)"
                   explainText="$(string.C_Office_d)" >
-            <parentCategory ref="KyGP" />
+            <parentCategory ref="KnectGP" />
         </category>
         <category name="O14"
                   displayName="$(string.C_Office14)"
@@ -124,11 +66,11 @@
         <category name="Windows"
                   displayName="$(string.C_Windows)"
                   explainText="$(string.C_Windows_d)" >
-            <parentCategory ref="KyGP" />
+            <parentCategory ref="KnectGP" />
         </category>
         <category name="Windows_ControlPanel"
                   displayName="$(string.C_ControlPanel)"
-                  explainText="$(string.C_ControlPanel_d)" >
+                  explainText="$(string.D_ControlPanel)" >
             <parentCategory ref="Windows" />
         </category>
         <category name="Windows_ControlPanel_SecurityAndMaintenance"
@@ -138,44 +80,49 @@
         </category>
         <category name="Windows_10"
                   displayName="$(string.C_Windows_10)"
-                  explainText="$(string.C_Windows_10_d)" >
-            <parentCategory ref="KyGP" />
+                  explainText="$(string.D_Windows_10)" >
+            <parentCategory ref="KnectGP" />
         </category>
         <category name="Windows_10_ControlPanel"
                   displayName="$(string.C_ControlPanel)"
-                  explainText="$(string.C_ControlPanel_d)" >
+                  explainText="$(string.D_ControlPanel)" >
             <parentCategory ref="Windows_10" />
         </category>
         <category name="Windows_10_ControlPanel_FileExplorerOptions"
                   displayName="$(string.C_FileExplorerOptions)"
-                  explainText="$(string.C_ExplorerOptions_d)" >
+                  explainText="$(string.D_ExplorerOptions)" >
             <parentCategory ref="Windows_10_ControlPanel" />
         </category>
         <category name="Windows_10_Settings"
                   displayName="$(string.C_Settings)"
-                  explainText="$(string.C_Settings_Windows_10_Settings_d)" >
+                  explainText="$(string.D_Settings_Windows_10_Settings)" >
             <parentCategory ref="Windows_10" />
         </category>
         <category name="Windows_10_Settings_Personalisation"
                   displayName="$(string.C_Personalisation)"
-                  explainText="$(string.C_Settings_Personalisation_d)" >
+                  explainText="$(string.D_Settings_Personalisation)" >
             <parentCategory ref="Windows_10_Settings" />
         </category>
         <category name="Windows_10_Settings_Personalisation_Colours"
                   displayName="$(string.C_Colours)"
-                  explainText="$(string.C_Windows_10_Settings_Personalisation_Colours_d)" >
+                  explainText="$(string.D_Windows_10_Settings_Personalisation_Colours)" >
             <parentCategory ref="Windows_10_Settings_Personalisation" />
         </category>
+		<category name="Windows_Essentials"
+				  displayName="$(string.C_Windows_Essentials)"
+				  explainText="$(string.D_Windows_Essentials)" >
+			<parentCategory ref="KnectGP" />
+		</category>
     </categories>
     <policies>
         <policy name="AutoColorization"
                 class="User"
                 displayName="$(string.P_AutoColorization)"
-                explainText="$(string.P_AutoColorization_d)"
+                explainText="$(string.D_AutoColorization)"
                 key="Control Panel\Desktop"
                 valueName="AutoColorization" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
-            <supportedOn ref="Su_Windows_1511" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -186,11 +133,11 @@
         <policy name="ShowColourExptTitleBar"
                 class="User"
                 displayName="$(string.P_ShowColourExptTitleBar)"
-                explainText="$(string.P_ShowColourExptTitleBar_d)"
+                explainText="$(string.D_ShowColourExptTitleBar)"
                 key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"
                 valueName="ColorPrevalence" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
-            <supportedOn ref="Su_Windows_1511" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -201,11 +148,11 @@
         <policy name="ShowColourOnTitleBar"
                 class="User"
                 displayName="$(string.P_ShowColourOnTitleBar)"
-                explainText="$(string.P_ShowColourOnTitleBar_d)"
+                explainText="$(string.D_ShowColourOnTitleBar)"
                 key="Software\Microsoft\Windows\DWM"
                 valueName="ColorPrevalence" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
-            <supportedOn ref="Su_Windows_1511" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -216,10 +163,10 @@
         <policy name="DisableJavaAutoUpdate"
                 class="Machine"
                 displayName="$(string.P_DisableJavaAutoUpdate)"
-                explainText="$(string.P_DisableJavaAutoUpdate_d)"
+                explainText="$(string.D_DisableJavaAutoUpdate)"
                 key="SOFTWARE\JavaSoft\Java Update\Policy" >
             <parentCategory ref="Java" />
-            <supportedOn ref="Su_Java" />
+            <supportedOn ref="KnectGP_SU:Java" />
             <enabledList>
                 <item key="SOFTWARE\JavaSoft\Java Update\Policy"
                       valueName="EnableJavaUpdate" >
@@ -252,11 +199,11 @@
         <policy name="OpenFileExplorerTo"
                 class="User"
                 displayName="$(string.P_OpenFileExplorerTo)"
-                explainText="$(string.P_OpenFileExplorerTo_d)"
+                explainText="$(string.D_OpenFileExplorerTo)"
                 key="SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
                 valueName="LaunchTo" >
             <parentCategory ref="Windows_10_ControlPanel_FileExplorerOptions" />
-            <supportedOn ref="Su_Windows_1511" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -271,7 +218,7 @@
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
-            <supportedOn ref="Su_WindowsVista" />
+            <supportedOn ref="KnectGP_SU:WindowsVista" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -285,7 +232,7 @@
                 explainText="$(string.P_KidrexDefaultSearchEngine_d)"
                 key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
             <parentCategory ref="IE" />
-            <supportedOn ref="Su_IE7" />
+            <supportedOn ref="KnectGP_SU:IE_7" />
             <enabledList>
                 <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
                       valueName="DisplayName" >
@@ -342,11 +289,11 @@
         <policy name="O16_DisableTopology"
                 class="User"
                 displayName="$(string.P_DisableTopology)"
-                explainText="$(string.P_DisableTopology_d)"
+                explainText="$(string.D_DisableTopology)"
                 key="SOFTWARE\Microsoft\Office\16.0\PowerPoint\Options"
                 valueName="DisableSetTopology" >
-            <parentCategory ref="O16_PowerPoint" />
-            <supportedOn ref="Su_O16_PowerPoint" />
+            <parentCategory ref="O16_PP" />
+            <supportedOn ref="KnectGP_SU:O16_PP" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -357,11 +304,11 @@
         <policy name="O15_DisableUseMonMgr"
                 class="User"
                 displayName="$(string.P_DisableUseMonMgr)"
-                explainText="$(string.P_DisableUseMonMgr_d)"
+                explainText="$(string.D_DisableUseMonMgr)"
                 key="SOFTWARE\Microsoft\Office\15.0\PowerPoint\Options"
                 valueName="UseMonMgr" >
-            <parentCategory ref="O15_PowerPoint" />
-            <supportedOn ref="Su_O15_PowerPoint" />
+            <parentCategory ref="O15_PP" />
+            <supportedOn ref="KnectGP_SU:O15_PP" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -372,11 +319,11 @@
         <policy name="O14_DisableUseMonMgr"
                 class="User"
                 displayName="$(string.P_DisableUseMonMgr)"
-                explainText="$(string.P_DisableUseMonMgr_d)"
+                explainText="$(string.D_DisableUseMonMgr)"
                 key="SOFTWARE\Microsoft\Office\14.0\PowerPoint\Options"
                 valueName="UseMonMgr" >
-            <parentCategory ref="O14_PowerPoint" />
-            <supportedOn ref="Su_O14_PowerPoint" />
+            <parentCategory ref="O14_PP" />
+            <supportedOn ref="KnectGP_SU:O14_PP" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -384,5 +331,48 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+		<policy name="WE_SuppressEULA"
+				class="User"
+				displayName="$(string.P_SuppressEULA)"
+				
+				key="SOFTWARE\Microsoft\Windows Live\Common"
+				valueName="TOUVersion" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<enabledValue>
+				<string>16.0.0.0</string>
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
+		<policy name="WE_SkipSignIn"
+				class="User"
+				displayName="$(string.P_WE_SkipSignIn)"
+				
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery"
+				valueName="SignInRemindersLeft" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<enabledValue>
+				<decimal value="0" />
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
+		<policy name="WE_DontShowAssociationsDialogExtensions"
+				class="User"
+				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
+				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
+				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library"
+				valueName="DontShowAssociationsDialogExtensions" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<elements>
+				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
+			</elements>
+		</policy>
     </policies>
 </policyDefinitions>

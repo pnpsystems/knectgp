@@ -1,20 +1,17 @@
-#KyGP
+# KnectGP
 
-## Release 0.4.0
+## Release 0.5
 
-Version v0.4.0! Yet another large step in KyGP’s functionality
-Two of the things that have been fathomed recently, is the method to apply settings that use strings (REG_SZ) and the method to apply multiple (REG_SZ and (REG_DWORD) keys at the same time.
+Version v0.5! 
 
-An example of applying multiple keys is the Prevent Java AutoUpdater policy we had.
+This is a maintenance release more than anything. There was questions about the Office 2016 settings and when Office 2019 would be supported.
 
-Instead of having two separate policies or 32-bit Operating Systems and 64-bit Operating Systems, they have now been rolled into one; The benefit of doing this is that it minifies our lines somewhat, reduces the amount of policies we have on show and let’s face it, it looks tidier. :+1:
+Office 2016 terminology has been updated to identify as Office 2019 and Office 365, this is due to Microsoft not bumping up the version number and have preferred to keep Office at 16.0.x.x.
 
-We have also expanded further into managing settings in Microsoft Office, namely PowerPoint and also more complex items such as Search Engines in Internet Explorer (Edge will be looked into and other browsers may follow)
+And that’s that for v0.5.0!
 
-And that’s that for v0.4.0!
+Quality control is taken seriously at Knect and we test each policy in a mixed client domain, with a Windows Server 2019 Domain Controller and Windows 7 to 10 Clients, sometimes for a laugh we do boot up XP and Vista virtual machines.
 
-We have big plans for v0.5.0 and hopefully we won’t have a v0.4.1 ;-) We take our quality control seriously and test each policy in a mixed client domain, with a Windows Server 2016 Preview Domain Controller and 7 to 10 Clients, sometimes for a laugh we do boot up an XP machine.
+For a Full/Quick Reference of the Group Policies, please check out the readme.docx
 
-For a reference of the Group Policies, please check out the readme.docx
-
-If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton) or via email at kyle.hulton@kyit.co.uk
+If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton).
