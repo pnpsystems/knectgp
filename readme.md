@@ -12,6 +12,4 @@ And that’s that for v0.5.0!
 
 Quality control is taken seriously at Knect and we test each policy in a mixed client domain, with a Windows Server 2019 Domain Controller and Windows 7 to 10 Clients, sometimes for a laugh we do boot up XP and Vista virtual machines.
 
-For a Full/Quick Reference of the Group Policies, please check out the readme.docx
-
 If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton).
