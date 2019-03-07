@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version: 0.5.1 -->
+<policyDefinitions
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    revision="0.6"
+    schemaVersion="1.0"
+    xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
+    <policyNamespaces>
+        <target prefix="KnectGP" namespace="KnectGP.Main" />
+		<using prefix="KnectGP_SU" namespace="KnectGP.SupportedOnDefinitions" />
+    </policyNamespaces>
+    <supersededAdm fileName="kidrex.adm" />
+    <resources minRequiredRevision="0.6"
+			   fallbackCulture="en-gb" />
+    <categories>
+        <category name="KnectGP" 
+                  displayName="$(string.C_KnectGP)"
+                  explainText="$(string.D_KnectGP)"
+        />
+        <category name="IE"
+                  displayName="$(string.C_IE)"
+                  explainText="$(string.D_IE)" >
+            <parentCategory ref="KnectGP" />
+        </category>
+        <category name="Java" 
+                  displayName="$(string.C_Java)"
+                  explainText="$(string.D_Java)" >
+            <parentCategory ref="KnectGP" />
+        </category>
+        <category name="Office"
+                  displayName="$(string.C_Office)"
+                  explainText="$(string.D_Office)" >
+            <parentCategory ref="KnectGP" />
+        </category>
+        <category name="O14"
+                  displayName="$(string.C_O14)"
+                  explainText="$(string.D_O14)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O14_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
+            <parentCategory ref="O14" />
+        </category>
+        <category name="O15"
+                  displayName="$(string.C_O15)"
+                  explainText="$(string.D_O15)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O15_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
+            <parentCategory ref="O15" />
+        </category>
+        <category name="O16"
+                  displayName="$(string.C_O16)"
+                  explainText="$(string.D_O16)" >
+            <parentCategory ref="Office" />
+        </category>
+        <category name="O16_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
+            <parentCategory ref="O16" />
+        </category>
+        <category name="Windows"
+                  displayName="$(string.C_Windows)"
+                  explainText="$(string.D_Windows)" >
+            <parentCategory ref="KnectGP" />
+        </category>
+        <category name="Windows_ControlPanel"
+                  displayName="$(string.C_ControlPanel)"
+                  explainText="$(string.D_ControlPanel)" >
+            <parentCategory ref="Windows" />
+        </category>
+        <category name="Windows_ControlPanel_SecurityAndMaintenance"
+                  displayName="$(string.C_SecurityAndMaintenance)"
+                  explainText="$(string.D_SecurityAndMaintenance)" >
+            <parentCategory ref="Windows_ControlPanel" />
+        </category>
+        <category name="Windows_ControlPanel_System"
+                  displayName="$(string.C_System)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Windows_ControlPanel" />
+        </category>
+        <category name="Windows_ControlPanel_System_RemoteDesktop"
+                  displayName="$(string.C_Remote_Desktop)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Windows_ControlPanel_System" />
+        </category>
+        <category name="Windows_10"
+                  displayName="$(string.C_Windows_10)"
+                  explainText="$(string.D_Windows_10)" >
+            <parentCategory ref="KnectGP" />
+        </category>
+        <category name="Windows_10_ControlPanel"
+                  displayName="$(string.C_ControlPanel)"
+                  explainText="$(string.D_ControlPanel)" >
+            <parentCategory ref="Windows_10" />
+        </category>
+        <category name="Windows_10_ControlPanel_FileExplorerOptions"
+                  displayName="$(string.C_FileExplorerOptions)"
+                  explainText="$(string.D_ExplorerOptions)" >
+            <parentCategory ref="Windows_10_ControlPanel" />
+        </category>
+        <category name="Windows_10_Settings"
+                  displayName="$(string.C_Settings)"
+                  explainText="$(string.D_Settings_Windows_10_Settings)" >
+            <parentCategory ref="Windows_10" />
+        </category>
+        <category name="Windows_10_Settings_Personalisation"
+                  displayName="$(string.C_Personalisation)"
+                  explainText="$(string.D_Settings_Personalisation)" >
+            <parentCategory ref="Windows_10_Settings" />
+        </category>
+        <category name="Windows_10_Settings_Personalisation_Colours"
+                  displayName="$(string.C_Colours)"
+                  explainText="$(string.D_Windows_10_Settings_Personalisation_Colours)" >
+            <parentCategory ref="Windows_10_Settings_Personalisation" />
+        </category>
+		<category name="Windows_Essentials"
+				  displayName="$(string.C_Windows_Essentials)"
+				  explainText="$(string.D_Windows_Essentials)" >
+			<parentCategory ref="KnectGP" />
+		</category>
+    </categories>
+    <policies>
+        <policy name="AutoColorisation"
+                class="User"
+                displayName="$(string.P_AutoColorisation)"
+                explainText="$(string.D_AutoColorisation)"
+                key="Control Panel\Desktop"
+                valueName="AutoColorization" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="ShowColourExptTitleBar"
+                class="User"
+                displayName="$(string.P_ShowColourExptTitleBar)"
+                explainText="$(string.D_ShowColourExptTitleBar)"
+                key="Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+                valueName="ColorPrevalence" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="ShowColourOnTitleBar"
+                class="User"
+                displayName="$(string.P_ShowColourOnTitleBar)"
+                explainText="$(string.D_ShowColourOnTitleBar)"
+                key="Software\Microsoft\Windows\DWM"
+                valueName="ColorPrevalence" >
+            <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableJavaAutoUpdate"
+                class="Machine"
+                displayName="$(string.P_DisableJavaAutoUpdate)"
+                explainText="$(string.D_DisableJavaAutoUpdate)"
+                key="SOFTWARE\JavaSoft\Java Update\Policy" >
+            <parentCategory ref="Java" />
+            <supportedOn ref="KnectGP_SU:Java" />
+            <enabledList>
+                <item key="SOFTWARE\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+            </enabledList>
+            <disabledList>
+                <item key="SOFTWARE\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy"
+                      valueName="EnableJavaUpdate" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
+            </disabledList>
+        </policy>
+        <policy name="OpenFileExplorerTo"
+                class="User"
+                displayName="$(string.P_OpenFileExplorerTo)"
+                explainText="$(string.D_OpenFileExplorerTo)"
+                key="SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+                valueName="LaunchTo" >
+            <parentCategory ref="Windows_10_ControlPanel_FileExplorerOptions" />
+            <supportedOn ref="KnectGP_SU:Windows_1511" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="2" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableWindowsBackupMonitoring"
+                class="Machine"
+                displayName="$(string.P_DisableWindowsBackupMonitoring)"
+                
+                key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
+                valueName="DisableMonitoring" >
+            <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
+            <supportedOn ref="KnectGP_SU:WindowsVista" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="KidrexDefaultSearchEngine"
+                class="User"
+                displayName="$(string.P_KidrexDefaultSearchEngine)"
+                explainText="$(string.D_KidrexDefaultSearchEngine)"
+                key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
+            <parentCategory ref="IE" />
+            <supportedOn ref="KnectGP_SU:IE_7" />
+            <enabledList>
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      valueName="DisplayName" >
+                    <value>
+                        <string>Kidrex</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      valueName="URL" >
+                    <value>
+                        <string>http://www.kidrex.org/results/?q={searchTerms}</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      valueName="ShowSearchSuggestions" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes\{FEA49DE7-D02E-424C-8D3B-4E5919428355}"
+                      valueName="FaviconURL" >
+                    <value>
+                        <string>http://www.kidrex.org/favicon.ico</string>
+                    </value>
+                </item>
+                <item key="SOFTWARE\Policies\Microsoft\Internet Explorer\SearchScopes"
+                      valueName="DefaultScope" >
+                    <value>
+                        <string>{FEA49DE7-D02E-424C-8D3B-4E5919428355}</string>
+                    </value>
+                </item>
+                <item key="Software\Policies\Microsoft\Internet Explorer\Infodelivery\Restrictions"
+                      valueName="UsePolicySearchProvidersOnly" >
+                    <value>
+                        <decimal value="1" />
+                    </value>
+                </item>
+            </enabledList>
+            <disabledList>
+                <item key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes"
+                      valueName="DefaultScope" >
+                    <value><!-- bing.com -->
+                        <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
+                    </value>
+                </item>
+                <item key="Software\Policies\Microsoft\Internet Explorer\Infodelivery\Restrictions"
+                      valueName="UsePolicySearchProvidersOnly" >
+                    <value>
+                        <decimal value="0" />
+                    </value>
+                </item>
+            </disabledList>
+        </policy>
+        <policy name="O16_DisableTopology"
+                class="User"
+                displayName="$(string.P_DisableTopology)"
+                explainText="$(string.D_DisableTopology)"
+                key="SOFTWARE\Microsoft\Office\16.0\PowerPoint\Options"
+                valueName="DisableSetTopology" >
+            <parentCategory ref="O16_PP" />
+            <supportedOn ref="KnectGP_SU:O16_PP" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="O15_DisableUseMonMgr"
+                class="User"
+                displayName="$(string.P_DisableUseMonMgr)"
+                explainText="$(string.D_DisableUseMonMgr)"
+                key="SOFTWARE\Microsoft\Office\15.0\PowerPoint\Options"
+                valueName="UseMonMgr" >
+            <parentCategory ref="O15_PP" />
+            <supportedOn ref="KnectGP_SU:O15_PP" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="O14_DisableUseMonMgr"
+                class="User"
+                displayName="$(string.P_DisableUseMonMgr)"
+                explainText="$(string.D_DisableUseMonMgr)"
+                key="SOFTWARE\Microsoft\Office\14.0\PowerPoint\Options"
+                valueName="UseMonMgr" >
+            <parentCategory ref="O14_PP" />
+            <supportedOn ref="KnectGP_SU:O14_PP" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+		<policy name="WE_SuppressEULA"
+				class="User"
+				displayName="$(string.P_SuppressEULA)"
+				
+				key="SOFTWARE\Microsoft\Windows Live\Common"
+				valueName="TOUVersion" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<enabledValue>
+				<string>16.0.0.0</string>
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
+		<policy name="WE_SkipSignIn"
+				class="User"
+				displayName="$(string.P_WE_SkipSignIn)"
+				
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery"
+				valueName="SignInRemindersLeft" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<enabledValue>
+				<decimal value="0" />
+			</enabledValue>
+			<disabledValue>
+				<delete />
+			</disabledValue>
+		</policy>
+		<policy name="WE_DontShowAssociationsDialogExtensions"
+				class="User"
+				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
+				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
+				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library" >
+			<parentCategory ref="Windows_Essentials" />
+			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+			<elements>
+				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
+			</elements>
+		</policy>
+        <policy name="RemoteDesktop_ListeningPort"
+                class="Machine"
+                displayName="$(string.P_RemoteDesktop_ListeningPort)"
+                
+				presentation="$(presentation.P_RemoteDesktop_ListeningPort)"
+				key="System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" >
+            <parentCategory ref="Windows_ControlPanel_System" />
+			<supportedOn ref="KnectGP_SU:Windows2000" />
+            <elements>
+                <decimal id="RDP_PortNumber" clientExtension="{3610eda5-77ef-11d2-8dc5-00c04fa31a66}" valueName="PortNumber" required="true" minValue="1" maxValue="65535" />
+            </elements>
+        </policy>
+    </policies>
+</policyDefinitions>

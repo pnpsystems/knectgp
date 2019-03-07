@@ -1,33 +1,15 @@
-#KyGP
+# KnectGP
 
-## Release 0.3.0
+## Release 0.5.1
 
-Release 0.3.0 is has been a big step!
+Version v0.5.1!
 
-Not only have I crushed some big issues with how I started off KyGP - cough #5
+### Bug Fixes
+Quick bug fix over the language for Office 2016 and later, some of the language wasn't showing. Partly because it was being incorrectly referenced as everything had moved since they were initally created. D'oh!
 
-I now have a standardised format in how the policies are now written and how the localisation is done!
+SupportedOn Definitions had an incorrect file name, this can be rectified on ealier builds by renaming `knect-su.admx` > `knectgp-su.admx`
 
-Just a quick overview on the definitions in the ADML
+### New Things
+You can now configure the default port of Remote Desktop as a Computer Configuration, this can be handy if you are limited to one external IP perhaps and you cannot bind external ports to a different internal port, i.e. 3390 > 3389
 
-Prefix | Description | Explination
------- | ----------- | -----------
-C_ | Category Definitions | These are essentially the names of the folder in the Group Policy Admin Pack.
-P_ | Policiy Definitions | These are the names of the Policies, i.e. Prevent this from happening.
-Su_ | supportedOn Definitions | This is the huge list of Windows Operating Systems that has been cultivated to allow for granular requirement descriptions!
-
-Suffix | Description | Explination
------- | ----------- | -----------
-_d | Definition Description | This is the description of the Definition that is selected when browing in the Group Policy Management Editor, for Policies this is what shows up on the right hand side :+1:
-
-So that happened :)
-
-A new policy was also added!
-
-Details are here - #3
-
-And thats that for 0.3! 
-
-For a reference of the Group Policies, please check out the readme.docx.
-
-If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton) or via email at kyle.hulton@kyit.co.uk
+If you have any questions, suggestions or want to help with translations; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton).
