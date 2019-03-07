@@ -1,15 +1,15 @@
 # KnectGP
 
-## Release 0.5
+## Release 0.5.1
 
-Version v0.5! 
+Version v0.5.1!
 
-This is a maintenance release more than anything. There was questions about the Office 2016 settings and when Office 2019 would be supported.
+### Bug Fixes
+Quick bug fix over the language for Office 2016 and later, some of the language wasn't showing. Partly because it was being incorrectly referenced as everything had moved since they were initally created. D'oh!
 
-Office 2016 terminology has been updated to identify as Office 2019 and Office 365, this is due to Microsoft not bumping up the version number and have preferred to keep Office at 16.0.x.x.
+SupportedOn Definitions had an incorrect file name, this can be rectified on ealier builds by renaming `knect-su.admx` > `knectgp-su.admx`
 
-And that’s that for v0.5.0!
+### New Things
+You can now configure the default port of Remote Desktop as a Computer Configuration, this can be handy if you are limited to one external IP perhaps and you cannot bind external ports to a different internal port, i.e. 3390 > 3389
 
-Quality control is taken seriously at Knect and we test each policy in a mixed client domain, with a Windows Server 2019 Domain Controller and Windows 7 to 10 Clients, sometimes for a laugh we do boot up XP and Vista virtual machines.
-
-If you have any questions or suggestions; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton).
+If you have any questions, suggestions or want to help with translations; contact me on Twitter @[kylehulton](https://www.twitter.com/kylehulton).

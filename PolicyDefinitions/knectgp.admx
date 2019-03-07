@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5.0 -->
+<!-- Version: 0.5.1 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.5"
+    revision="0.6"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
     <policyNamespaces>
@@ -11,7 +11,7 @@
 		<using prefix="KnectGP_SU" namespace="KnectGP.SupportedOnDefinitions" />
     </policyNamespaces>
     <supersededAdm fileName="kidrex.adm" />
-    <resources minRequiredRevision="0.5"
+    <resources minRequiredRevision="0.6"
 			   fallbackCulture="en-gb" />
     <categories>
         <category name="KnectGP" 
@@ -30,42 +30,42 @@
         </category>
         <category name="Office"
                   displayName="$(string.C_Office)"
-                  explainText="$(string.C_Office_d)" >
+                  explainText="$(string.D_Office)" >
             <parentCategory ref="KnectGP" />
         </category>
         <category name="O14"
-                  displayName="$(string.C_Office14)"
-                  explainText="$(string.C_Office14_d)" >
+                  displayName="$(string.C_O14)"
+                  explainText="$(string.D_O14)" >
             <parentCategory ref="Office" />
         </category>
-        <category name="O14_PowerPoint"
-                  displayName="$(string.C_Office14_PowerPoint)"
-                  explainText="$(string.C_Office14_PowerPoint_d)" >
+        <category name="O14_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
             <parentCategory ref="O14" />
         </category>
         <category name="O15"
-                  displayName="$(string.C_Office15)"
-                  explainText="$(string.C_Office15_d)" >
+                  displayName="$(string.C_O15)"
+                  explainText="$(string.D_O15)" >
             <parentCategory ref="Office" />
         </category>
-        <category name="O15_PowerPoint"
-                  displayName="$(string.C_Office15_PowerPoint)"
-                  explainText="$(string.C_Office15_PowerPoint_d)" >
+        <category name="O15_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
             <parentCategory ref="O15" />
         </category>
         <category name="O16"
-                  displayName="$(string.C_Office16)"
-                  explainText="$(string.C_Office16_d)" >
+                  displayName="$(string.C_O16)"
+                  explainText="$(string.D_O16)" >
             <parentCategory ref="Office" />
         </category>
-        <category name="O16_PowerPoint"
-                  displayName="$(string.C_Office16_PowerPoint)"
-                  explainText="$(string.C_Office16_PowerPoint_d)" >
+        <category name="O16_PP"
+                  displayName="$(string.C_Office_PP)"
+                  explainText="$(string.D_Office_PP)" >
             <parentCategory ref="O16" />
         </category>
         <category name="Windows"
                   displayName="$(string.C_Windows)"
-                  explainText="$(string.C_Windows_d)" >
+                  explainText="$(string.D_Windows)" >
             <parentCategory ref="KnectGP" />
         </category>
         <category name="Windows_ControlPanel"
@@ -75,8 +75,18 @@
         </category>
         <category name="Windows_ControlPanel_SecurityAndMaintenance"
                   displayName="$(string.C_SecurityAndMaintenance)"
-                  explainText="$(string.C_SecurityAndMaintenance_d)" >
+                  explainText="$(string.D_SecurityAndMaintenance)" >
             <parentCategory ref="Windows_ControlPanel" />
+        </category>
+        <category name="Windows_ControlPanel_System"
+                  displayName="$(string.C_System)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Windows_ControlPanel" />
+        </category>
+        <category name="Windows_ControlPanel_System_RemoteDesktop"
+                  displayName="$(string.C_Remote_Desktop)"
+                  explainText="$(string.C_d)" >
+            <parentCategory ref="Windows_ControlPanel_System" />
         </category>
         <category name="Windows_10"
                   displayName="$(string.C_Windows_10)"
@@ -115,10 +125,10 @@
 		</category>
     </categories>
     <policies>
-        <policy name="AutoColorization"
+        <policy name="AutoColorisation"
                 class="User"
-                displayName="$(string.P_AutoColorization)"
-                explainText="$(string.D_AutoColorization)"
+                displayName="$(string.P_AutoColorisation)"
+                explainText="$(string.D_AutoColorisation)"
                 key="Control Panel\Desktop"
                 valueName="AutoColorization" >
             <parentCategory ref="Windows_10_Settings_Personalisation_Colours" />
@@ -214,7 +224,7 @@
         <policy name="DisableWindowsBackupMonitoring"
                 class="Machine"
                 displayName="$(string.P_DisableWindowsBackupMonitoring)"
-                explainText="$(string.P_DisableWindowsBackupMonitoring_d)"
+                
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
@@ -229,7 +239,7 @@
         <policy name="KidrexDefaultSearchEngine"
                 class="User"
                 displayName="$(string.P_KidrexDefaultSearchEngine)"
-                explainText="$(string.P_KidrexDefaultSearchEngine_d)"
+                explainText="$(string.D_KidrexDefaultSearchEngine)"
                 key="SOFTWARE\Microsoft\Internet Explorer\SearchScopes" >
             <parentCategory ref="IE" />
             <supportedOn ref="KnectGP_SU:IE_7" />
@@ -366,13 +376,24 @@
 				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
 				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
 				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
-				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library"
-				valueName="DontShowAssociationsDialogExtensions" >
+				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library" >
 			<parentCategory ref="Windows_Essentials" />
 			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
 			<elements>
 				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
 			</elements>
 		</policy>
+        <policy name="RemoteDesktop_ListeningPort"
+                class="Machine"
+                displayName="$(string.P_RemoteDesktop_ListeningPort)"
+                
+				presentation="$(presentation.P_RemoteDesktop_ListeningPort)"
+				key="System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" >
+            <parentCategory ref="Windows_ControlPanel_System" />
+			<supportedOn ref="KnectGP_SU:Windows2000" />
+            <elements>
+                <decimal id="RDP_PortNumber" clientExtension="{3610eda5-77ef-11d2-8dc5-00c04fa31a66}" valueName="PortNumber" required="true" minValue="1" maxValue="65535" />
+            </elements>
+        </policy>
     </policies>
 </policyDefinitions>

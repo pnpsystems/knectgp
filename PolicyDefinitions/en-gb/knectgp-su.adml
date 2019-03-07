@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5.0 -->
+<!-- Version: 0.5.1 -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.5"
+    revision="0.6"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
 	<displayName>KnectGP SupportedOn Definitions</displayName>
@@ -34,10 +34,12 @@
             <string id="O14_PP">At least Microsoft PowerPoint 2010</string>
             <string id="O15">At least Microsoft Office 2013</string>
             <string id="O15_PP">At least Microsoft PowerPoint 2013</string>
-            <string id="O16">At least Microsoft Office 2016/365</string>
-            <string id="O16_PP">At least Microsoft PowerPoint 2016/365</string>
+            <string id="O16">At least Microsoft Office 2016+ or 365</string>
+            <string id="O16_PP">At least Microsoft PowerPoint 2016+ or 365</string>
             
-            <!-- Windows Clients --><!-- Windows Vista -->
+            <!-- Windows Clients --><!-- Windows XP -->
+            <string id="WindowsXP">At least Windows XP</string>
+            <!-- Windows Vista -->
             <string id="WindowsVista">At least Windows Vista</string>
             <string id="WindowsVista_SP1">At least Windows Vista with Service Pack 1</string>
             <string id="WindowsVista_SP2">At least Windows Vista with Service Pack 2</string>
@@ -88,6 +90,8 @@
             <string id="WindowsSrv2019">At least Windows Server 2019</string>
             
             <!-- Windows Clients and Servers (Shared) -->
+            <!-- Windows 2000 -->
+            <string id="Windows_5">At least Windows 2000</string>
             <!-- Windows Vista and Server 2008 -->
             <string id="Windows_6000">At least Windows Vista or Windows Server 2008</string>
             <string id="Windows_6001">At least Windows Vista Service Pack 1 or Windows Server 2008 Service Pack 1</string>
