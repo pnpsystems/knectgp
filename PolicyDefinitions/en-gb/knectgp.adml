@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5.0 -->
+<!-- Version: 0.5.1 -->
 <policyDefinitionResources
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.5"
+    revision="0.6"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
 	<displayName>KnectGP</displayName>
@@ -18,14 +18,14 @@
             <string id="C_Java">Java</string>
 			<string id="C_KnectGP">KnectGP</string>
             <string id="C_Office">Microsoft Office</string>
+            <string id="C_Office_PP">PowerPoint</string>
             <string id="C_O14">Office 2010</string>
             <string id="C_O15">Office 2013</string>
             <string id="C_O16">Office 2016/2019 and Office 365</string>
-            <string id="C_O14_PP">PowerPoint 2010</string>
-            <string id="C_O15_PP">PowerPoint 2013</string>
-            <string id="C_O16_PP">PowerPoint 2016/2019 and Powerpoint 365</string>
             <string id="C_Personalisation">Personalisation</string>
+            <string id="C_Remote_Desktop">Remote Desktop/Access</string>
             <string id="C_SecurityAndMaintenance">Security and Maintenance</string>
+            <string id="C_System">System</string>
             <string id="C_Settings">Settings</string>
             <string id="C_TurnMessagesOnOrOff">Turn messages on or off</string>
             <string id="C_Windows">Windows</string>
@@ -48,18 +48,16 @@
             <string id="D_Windows_10">Controls for Windows 10</string>
             <string id="D_Windows_10_Settings_Personalisation_Colours">Control the options for the settings located in Colours, in Personalisation on the Settings App on Windows 10!</string>
             <string id="D_Office">Options configurable for Microsoft Office Products</string>
+            <string id="D_Office_PP">Options configurable for PowerPoint</string>
             <string id="D_O14">Options configurable for Office 2010 Products</string>
-            <string id="D_O14_PP">Options configurable for PowerPoint 2010</string>
             <string id="D_O15">Options configurable for Office 2013 Products</string>
-            <string id="D_O15_PP">Options configurable for PowerPoint 2013</string>
             <string id="D_O16">Options configurable for Office 2016/2019 and Office 365 Products</string>
-            <string id="D_O16_PP">Options configurable for PowerPoint 2016/2019 and Office 365</string>
             <string id="D_Windows">Change settings across versions of Windows</string>
-            <string id="D_SecurityAndMaintenance">Look here for settings in the Action Center for Windows Vista and 7 as well as the Security and Maintainance area on Windows 8 and 10</string>
+            <string id="D_SecurityAndMaintenance">Options configurable for the Action Center on Windows Vista/2008/7/2008 R2; and Security and Maintainance on Windows 8+/2012+</string>
             <string id="D_Windows_Essentials">Settings for Windows Essentials 2012</string>
             
             <!-- Policy Definitions -->
-            <string id="P_AutoColorization">Specify default value of switch "Automatically pick an accent colour from my background"</string>
+            <string id="P_AutoColorisation">Specify default value of "Automatically pick an accent colour from my background"</string>
             <string id="P_DisableJavaAutoUpdate_amd64">Prevent Java AutoUpdater from Running (64-bit Windows)</string>
             <string id="P_DisableJavaAutoUpdate_win32">Prevent Java AutoUpdater from Running (32-bit Windows)</string>
             <string id="P_DisableJavaAutoUpdate">Prevent Java AutoUpdater from Running</string>
@@ -69,6 +67,7 @@
             <string id="P_DisableWindowsFirewallMonitoring">Disable Monitoring of Windows Firewall</string>
             <string id="P_KidrexDefaultSearchEngine">Make Kidrex the Default Search Engine</string>
             <string id="P_OpenFileExplorerTo">Prevent File Explorer opening to Quick Access</string>
+            <string id="P_RemoteDesktop_ListeningPort">Change the port number which Remote Desktop listens on</string>
             <string id="P_ShowColourExptTitleBar">Enable Show Colour on Start, Taskbar and Action Center</string>
             <string id="P_ShowColourOnTitleBar">Enable Show Colour on Title Bar</string>
 			<string id="P_SuppressEULA">Suppress the EULA</string>
@@ -78,7 +77,7 @@
             
             <!-- Policy Descriptions -->
             <!-- Tabs inside the <string> show in Group Policy Management Editor, this is why the <strings>'s are untabbed! -->
-            <string id="D_AutoColorization">Not configuring this object will not remove the policy. 
+            <string id="D_AutoColorisation">Not configuring this object will not remove the policy. 
                 It simply stops applying during user logon.
 
             Enabled: This puts the switch in the on position.
@@ -161,6 +160,13 @@
 			<presentation id="P_WE_DontShowAssociationsDialogExtensions">
                 <multiTextBox refId="M_WE_DontShowAssociationsDialogExtensions">Please specifiy the file extensions you don't wish Photo Gallery to change defaults below:</multiTextBox>
 			</presentation>
-		</presentationTable>
+            <presentation id="P_RemoteDesktop_ListeningPort">
+                <text>Specify the port that you want to have the RDP Protocol listing from</text>
+                <text>Default is 3389.</text>
+                <text> </text>
+                <text>Port Number:</text>
+                <decimalTextBox refId="RDP_PortNumber" defaultValue="3389" spinStep="1">Value</decimalTextBox>
+            </presentation>
+        </presentationTable>
   	</resources>
 </policyDefinitionResources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5.0 -->
+<!-- Version: 0.5.1 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    revision="0.5"
+    revision="0.6"
     schemaVersion="1.0"
     xmlns="http://www.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" >
     <policyNamespaces>
@@ -30,7 +30,8 @@
 			<definition name="O16" displayName="$(string.O16)" />
 			<definition name="O16_PP" displayName="$(string.O16_PP)" />
 			<definition name="Windows_Essentials" displayName="$(string.Windows_Essentials)" />
-		
+            
+            <definition name="Windows2000" displayName="$(string.Windows_5)" />
 			<definition name="WindowsVista" displayName="$(string.WindowsVista)" />
 			<definition name="WindowsVista_SP1" displayName="$(string.WindowsVista_SP1)" />
 			<definition name="WindowsVista_SP2" displayName="$(string.WindowsVista_SP2)" />
