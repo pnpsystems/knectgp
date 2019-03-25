@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version: 0.5.1 -->
+<!-- Version: 0.6 -->
 <policyDefinitions
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,7 +14,7 @@
     <resources minRequiredRevision="0.6"
 			   fallbackCulture="en-gb" />
     <categories>
-        <category name="KnectGP" 
+        <category name="KnectGP"
                   displayName="$(string.C_KnectGP)"
                   explainText="$(string.D_KnectGP)"
         />
@@ -23,7 +23,7 @@
                   explainText="$(string.D_IE)" >
             <parentCategory ref="KnectGP" />
         </category>
-        <category name="Java" 
+        <category name="Java"
                   displayName="$(string.C_Java)"
                   explainText="$(string.D_Java)" >
             <parentCategory ref="KnectGP" />
@@ -117,6 +117,11 @@
                   displayName="$(string.C_Colours)"
                   explainText="$(string.D_Windows_10_Settings_Personalisation_Colours)" >
             <parentCategory ref="Windows_10_Settings_Personalisation" />
+        </category>
+        <category name="Windows_10_Settings_TimeLanguage"
+                  displayName="$(string.C_TimeLanguage)"
+                  explainText="$(string.D_TimeLanguage)" >
+            <parentCategory ref="Windows_10_Settings" />
         </category>
 		<category name="Windows_Essentials"
 				  displayName="$(string.C_Windows_Essentials)"
@@ -224,7 +229,7 @@
         <policy name="DisableWindowsBackupMonitoring"
                 class="Machine"
                 displayName="$(string.P_DisableWindowsBackupMonitoring)"
-                
+
                 key="SOFTWARE\Microsoft\Windows\CurentVersion\WindowsBackup"
                 valueName="DisableMonitoring" >
             <parentCategory ref="Windows_ControlPanel_SecurityAndMaintenance" />
@@ -341,59 +346,74 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-		<policy name="WE_SuppressEULA"
-				class="User"
-				displayName="$(string.P_SuppressEULA)"
-				
-				key="SOFTWARE\Microsoft\Windows Live\Common"
-				valueName="TOUVersion" >
-			<parentCategory ref="Windows_Essentials" />
-			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
-			<enabledValue>
-				<string>16.0.0.0</string>
-			</enabledValue>
-			<disabledValue>
-				<delete />
-			</disabledValue>
-		</policy>
-		<policy name="WE_SkipSignIn"
-				class="User"
-				displayName="$(string.P_WE_SkipSignIn)"
-				
-				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery"
-				valueName="SignInRemindersLeft" >
-			<parentCategory ref="Windows_Essentials" />
-			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
-			<enabledValue>
-				<decimal value="0" />
-			</enabledValue>
-			<disabledValue>
-				<delete />
-			</disabledValue>
-		</policy>
-		<policy name="WE_DontShowAssociationsDialogExtensions"
-				class="User"
-				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
-				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
-				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
-				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library" >
-			<parentCategory ref="Windows_Essentials" />
-			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
-			<elements>
-				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
-			</elements>
-		</policy>
+    		<policy name="WE_SuppressEULA"
+    				class="User"
+    				displayName="$(string.P_SuppressEULA)"
+
+    				key="SOFTWARE\Microsoft\Windows Live\Common"
+    				valueName="TOUVersion" >
+    			<parentCategory ref="Windows_Essentials" />
+    			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+    			<enabledValue>
+    				<string>16.0.0.0</string>
+    			</enabledValue>
+    			<disabledValue>
+    				<delete />
+    			</disabledValue>
+    		</policy>
+    		<policy name="WE_SkipSignIn"
+    				class="User"
+    				displayName="$(string.P_WE_SkipSignIn)"
+
+    				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery"
+    				valueName="SignInRemindersLeft" >
+    			<parentCategory ref="Windows_Essentials" />
+    			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+    			<enabledValue>
+    				<decimal value="0" />
+    			</enabledValue>
+    			<disabledValue>
+    				<delete />
+    			</disabledValue>
+    		</policy>
+    		<policy name="WE_DontShowAssociationsDialogExtensions"
+    				class="User"
+    				displayName="$(string.P_WE_DontShowAssociationsDialogExtensions)"
+    				explainText="$(string.D_WE_DontShowAssociationsDialogExtensions)"
+    				presentation="$(presentation.P_WE_DontShowAssociationsDialogExtensions)"
+    				key="SOFTWARE\Microsoft\Windows Live\Photo Gallery\Library" >
+    			<parentCategory ref="Windows_Essentials" />
+    			<supportedOn ref="KnectGP_SU:Windows_Essentials" />
+    			<elements>
+    				<multiText id="M_WE_DontShowAssociationsDialogExtensions" valueName="DontShowAssociationsDialogExtensions" maxStrings="10" maxLength="10" />
+    			</elements>
+    		</policy>
         <policy name="RemoteDesktop_ListeningPort"
                 class="Machine"
                 displayName="$(string.P_RemoteDesktop_ListeningPort)"
-                
-				presentation="$(presentation.P_RemoteDesktop_ListeningPort)"
-				key="System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" >
+
+        				presentation="$(presentation.P_RemoteDesktop_ListeningPort)"
+        				key="System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" >
             <parentCategory ref="Windows_ControlPanel_System" />
-			<supportedOn ref="KnectGP_SU:Windows2000" />
+	          <supportedOn ref="KnectGP_SU:Windows2000" />
             <elements>
                 <decimal id="RDP_PortNumber" clientExtension="{3610eda5-77ef-11d2-8dc5-00c04fa31a66}" valueName="PortNumber" required="true" minValue="1" maxValue="65535" />
             </elements>
+        </policy>
+        <policy name="tzautoupdate_start"
+          class="Machine"
+          displayName="$(string.P_tzautoupdate_start)"
+          explainText="$(string.D_tzautoupdate_start)"
+          key="System\CurrentControlSet\Services\tzautoupdate"
+          valueName="Start" >
+          <parentCategory ref="Windows_10_Settings_TimeLanguage" />
+          <supportedOn ref="KnectGP_SU:Windows10_2016" />
+          <enabledValue>
+    				<decimal value="3" />
+    			</enabledValue>
+    			<disabledValue>
+    				<decimal value="4" />
+    			</disabledValue>
         </policy>
     </policies>
 </policyDefinitions>
