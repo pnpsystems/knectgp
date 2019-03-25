@@ -30,8 +30,7 @@
 			<definition name="O16" displayName="$(string.O16)" />
 			<definition name="O16_PP" displayName="$(string.O16_PP)" />
 			<definition name="Windows_Essentials" displayName="$(string.Windows_Essentials)" />
-            
-            <definition name="Windows2000" displayName="$(string.Windows_5)" />
+      <definition name="Windows2000" displayName="$(string.Windows_5)" />
 			<definition name="WindowsVista" displayName="$(string.WindowsVista)" />
 			<definition name="WindowsVista_SP1" displayName="$(string.WindowsVista_SP1)" />
 			<definition name="WindowsVista_SP2" displayName="$(string.WindowsVista_SP2)" />
@@ -40,6 +39,7 @@
 			<definition name="Windows8" displayName="$(string.Windows8)" />
 			<definition name="Windows8_1" displayName="$(string.Windows8_1)" />
 			<definition name="Windows8_1u" displayName="$(string.Windows8_1u)" />
+      <definition name="Windows10" displayName="$(string.Windows10)" />
 			<definition name="Windows10_RTM" displayName="$(string.Windows10_RTM)" />
 			<definition name="Windows10_TH1" displayName="$(string.Windows10_TH1)" />
 			<definition name="Windows10_10240" displayName="$(string.Windows10_10240)" />
@@ -47,7 +47,6 @@
 			<definition name="Windows10_TH2" displayName="$(string.Windows10_TH2)" />
 			<definition name="Windows10_10586" displayName="$(string.Windows10_10586)" />
 			<definition name="Windows10_1511" displayName="$(string.Windows10_1511)" />
-			<definition name="Windows10" displayName="$(string.Windows10)" />
 			<definition name="Windows10_RS1" displayName="$(string.Windows10_RS1)" />
 			<definition name="WindowsSrv2k8" displayName="$(string.WindowsSrv2k8)" />
 			<definition name="WindowsSrv2k8_SP1" displayName="$(string.WindowsSrv2k8_SP1)" />
@@ -58,6 +57,7 @@
 			<definition name="WindowsSrv2012R2" displayName="$(string.WindowsSrv2012R2)" />
 			<definition name="WindowsSrv2012R2u" displayName="$(string.WindowsSrv2012R2u)" />
 			<definition name="WindowsSrv2016" displayName="$(string.WindowsSrv2016)" />
+      <definition name="WindowsSrv2019" displayName="$(string.WindowsSrv2019)" />
 			<definition name="Windows_6000" displayName="$(string.Windows_6000)" />
 			<definition name="Windows_6001" displayName="$(string.Windows_6001)" />
 			<definition name="Windows_6002" displayName="$(string.Windows_6002)" />
@@ -66,6 +66,8 @@
 			<definition name="Windows_9200" displayName="$(string.Windows_9200)" />
 			<definition name="Windows_9600" displayName="$(string.Windows_9600)" />
 			<definition name="Windows_9600u" displayName="$(string.Windows_9600u)" />
+      <definition name="Windows10_2016" displayName="$(string.Windows10_2016)" />
+      <definition name="Windows10_2019" displayName="$(string.Windows10_2019)" />
 			<definition name="Windows_9841" displayName="$(string.Windows_9841)" />
 			<definition name="Windows_10074" displayName="$(string.Windows_10074)" />
 			<definition name="Windows_10586" displayName="$(string.Windows_10586)" />
